@@ -1,6 +1,6 @@
 import { Iconify } from '../../iconify';
 import type { IconCustomisations } from '../../misc/customisations';
-import { Icon, iconToString } from '../../misc/icon';
+import { type Icon, iconToString } from '../../misc/icon';
 import { renderHTML } from '../html';
 import type { CodeSampleAPIConfig, CodeSampleMode } from '../types';
 import type { CodeOutput } from './types';

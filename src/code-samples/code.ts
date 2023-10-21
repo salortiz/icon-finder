@@ -21,7 +21,7 @@ function assertNever(v: never) {
 }
 
 // Re-export types
-export { CodeOutput, ComponentCodeOutput };
+export type { CodeOutput, ComponentCodeOutput };
 
 /**
  * Output

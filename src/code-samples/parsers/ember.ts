@@ -1,5 +1,5 @@
 import type { IconCustomisations } from '../../misc/customisations';
-import { Icon, iconToString } from '../../misc/icon';
+import { type Icon, iconToString } from '../../misc/icon';
 import type { CodeSampleAPIConfig } from '../types';
 import { getComponentInstall } from '../versions';
 import {
@@ -7,7 +7,7 @@ import {
 	docsBase,
 	getCustomisationsList,
 	mergeAttributes,
-	ParserAttr,
+	type ParserAttr,
 } from './common';
 import type { CodeOutput, CodeParser, IconifyCodeDocs } from './types';
 

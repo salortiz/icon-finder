@@ -7,7 +7,7 @@ import {
 	docsBase,
 	getCustomisationsList,
 	mergeAttr,
-	ParserAttr,
+	type ParserAttr,
 	toString,
 } from './common';
 import type { CodeOutput, CodeParser, IconifyCodeDocs } from './types';

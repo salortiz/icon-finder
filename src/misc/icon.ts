@@ -1,5 +1,5 @@
 import {
-	IconifyIconName,
+	type IconifyIconName,
 	stringToIcon as convert,
 	validateIcon,
 } from '@iconify/utils/lib/icon/name';

@@ -1,5 +1,5 @@
 import {
-	IconifyIconCustomisations,
+	type IconifyIconCustomisations,
 	defaults,
 	mergeCustomisations as merge,
 } from '@iconify/utils/lib/customisations';

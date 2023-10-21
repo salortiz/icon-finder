@@ -1,6 +1,6 @@
 import {
 	emptyCustomisations,
-	IconCustomisations,
+	type IconCustomisations,
 } from '../../misc/customisations';
 import type { Icon } from '../../misc/icon';
 import type { CodeSampleAPIConfig } from '../types';

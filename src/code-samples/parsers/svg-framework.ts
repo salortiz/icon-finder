@@ -1,5 +1,5 @@
 import type { IconCustomisations } from '../../misc/customisations';
-import { Icon, iconToString } from '../../misc/icon';
+import { type Icon, iconToString } from '../../misc/icon';
 import type { CodeSampleAPIConfig } from '../types';
 import { iconifyVersion } from '../versions';
 import {
@@ -10,7 +10,7 @@ import {
 	isNumber,
 	mergeAttr,
 	mergeAttributes,
-	ParserAttr,
+	type ParserAttr,
 	toString,
 } from './common';
 import type { CodeOutput, CodeParser, IconifyCodeDocs } from './types';

@@ -15,7 +15,7 @@ export type IconifyGetVersion = () => string;
 export interface CoreIconifyFunctions
 	// Pick only required functions
 	extends Pick<IconifyStorageFunctions, 'getIcon' | 'addCollection'>,
-		Pick<IconifyAPIInternalFunctions, 'getAPI'>,
+		Pick<IconifyAPIInternalFunctions, 'getAPIConfig'>,
 		Pick<IconifyAPIFunctions, 'addAPIProvider'> {
 	// Functions from SVG framework
 	getVersion: IconifyGetVersion;
