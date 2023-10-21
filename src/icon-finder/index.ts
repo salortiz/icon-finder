@@ -1,5 +1,6 @@
-import { Wrapper } from './wrapper';
+export { Wrapper } from './wrapper';
 
+/*
 const container = document.getElementById('container');
 if (container) {
 	const wrapper = new Wrapper({
@@ -9,3 +10,4 @@ if (container) {
 		},
 	});
 }
+*/
