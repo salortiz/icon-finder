@@ -3,13 +3,14 @@ import type {
 	APIProviderRawDataNPM,
 	APIProviderRawData,
 } from '@iconify/types/provider';
-import type { IconifyAPIConfig } from '@iconify/iconify';
+import type { IconifyAPIConfig, PartialIconifyAPIConfig } from '@iconify/iconify';
+import { initRedundancy } from '@cyberalien/redundancy';
 import type { Redundancy } from '@cyberalien/redundancy';
 import { Iconify } from '../iconify';
 import { matchName } from '@iconify/utils/lib/icon';
 
 // Export imported types
-export { APIProviderRawDataLinks, APIProviderRawDataNPM, APIProviderRawData };
+export type { APIProviderRawDataLinks, APIProviderRawDataNPM, APIProviderRawData };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-unused-vars-experimental, @typescript-eslint/no-empty-function
 function assertNever(s: never): void {}
@@ -211,6 +212,12 @@ export function convertProviderData(
 	return result;
 }
 
+function getAPI(provider: string)  {
+	const redun = Iconify.getAPIConfig ? Iconify.getAPIConfig(provider) : void 0
+	if(!redun) return;
+	const config = {path: redun.path, maxURL: redun.maxURL};
+	return {redundancy: initRedundancy(redun), config };
+}
 /**
  * Get API provider
  */
@@ -224,7 +231,7 @@ export function getProvider(provider: string): APIProviderConfigured | null {
 		const source = internalSourceCache[provider];
 
 		// Get Redundancy instance from Iconify
-		const data = Iconify.getAPI ? Iconify.getAPI(provider) : void 0;
+		const data = getAPI(provider);
 		if (data === void 0) {
 			// Failed again - something is wrong with config
 			configuredCache[provider] = null;
@@ -269,7 +276,7 @@ export function addProvider(provider: string, config: APIProviderSource): void {
 		config.title = provider;
 	}
 	internalSourceCache[provider] = config;
-	Iconify.addAPIProvider(provider, config.config);
+	Iconify.addAPIProvider(provider, config.config as PartialIconifyAPIConfig);
 }
 
 /**
