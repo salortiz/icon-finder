@@ -301,7 +301,7 @@ describe('Testing converting collections list', () => {
 
 				// Only "Emoji" and only with palette
 				return (
-					item.palette &&
+					item.palette || false &&
 					item.name.toLowerCase().indexOf('emoji') !== -1
 				);
 			}

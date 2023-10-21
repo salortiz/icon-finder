@@ -77,6 +77,8 @@ export interface CodeOutput {
 
 	// True if code relies on API, false if offline
 	isAPI?: boolean;
+
+	iconify?: Record<string, string>
 }
 
 /**

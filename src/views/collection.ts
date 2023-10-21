@@ -30,7 +30,7 @@ import type { CollectionsView } from './collections';
 import { collectionsPrefixesWithInfo } from '../blocks/collections-list';
 import { getCollectionInfo, setCollectionInfo } from '../data/collections';
 import type { Icon } from '../misc/icon';
-import { APIParams, collectionCacheKey } from '../api/base';
+import { type APIParams, collectionCacheKey } from '../api/base';
 import type { IconFinderConvertedCache } from '../converters/cache';
 
 /**

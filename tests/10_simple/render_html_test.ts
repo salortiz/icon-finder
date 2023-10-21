@@ -1,7 +1,7 @@
 import 'mocha';
 import { expect } from 'chai';
 import { renderHTML } from '../../lib/code-samples/html';
-import { fullIcon, FullIconifyIcon } from '@iconify/utils/lib/icon';
+import { fullIcon, type FullIconifyIcon } from '@iconify/utils/lib/icon';
 import {
 	mergeCustomisations,
 	emptyCustomisations,

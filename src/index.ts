@@ -14,32 +14,32 @@ import { getCollectionInfo } from './data/collections';
 /**
  * Export data for various blocks
  */
-export { BlockType, Block, isBlockEmpty } from './blocks/types';
+export { type BlockType, type Block, isBlockEmpty } from './blocks/types';
 
-export { CollectionInfoBlock } from './blocks/collection-info';
+export type { CollectionInfoBlock } from './blocks/collection-info';
 
-export { CollectionsFilterBlock } from './blocks/collections-filter';
+export type { CollectionsFilterBlock } from './blocks/collections-filter';
 
 export {
-	CollectionsListBlock,
+	type CollectionsListBlock,
 	getCollectionsBlockCategories,
 	getCollectionsBlockPrefixes,
 	iterateCollectionsBlock,
 } from './blocks/collections-list';
 
-export { FiltersBlock, FiltersFilter } from './blocks/filters';
+export type { FiltersBlock, FiltersFilter } from './blocks/filters';
 
-export { IconsListBlock } from './blocks/icons-list';
+export type { IconsListBlock } from './blocks/icons-list';
 
-export { PaginationBlock, showPagination, maxPage } from './blocks/pagination';
+export { type PaginationBlock, showPagination, maxPage } from './blocks/pagination';
 
-export { SearchBlock } from './blocks/search';
+export type { SearchBlock } from './blocks/search';
 
 /**
  * Export various types and functions that do not depend on core instance
  */
 // Iconify wrapper
-export { setIconify, CoreIconifyFunctions } from './iconify';
+export { setIconify, type CoreIconifyFunctions } from './iconify';
 
 // Provider
 export type { APIProviderSource } from './data/providers';

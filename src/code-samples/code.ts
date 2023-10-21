@@ -15,7 +15,7 @@ import { svgFrameworkParser } from './parsers/svg-framework';
 import { webComponentParser } from './parsers/iconify-icon';
 import { vueOfflineParser, vueParser } from './parsers/vue';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-unused-vars-experimental
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function assertNever(v: never) {
 	//
 }

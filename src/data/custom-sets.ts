@@ -9,7 +9,7 @@ import { dataToCollections } from '../converters/collections';
 /**
  * TypeScript guard
  */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-unused-vars-experimental, @typescript-eslint/no-empty-function
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-function
 function assertNever(s: never): void {}
 
 /**

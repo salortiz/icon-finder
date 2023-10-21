@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars-experimental */
 import 'mocha';
 import { expect } from 'chai';
 import type { CollectionsFilterBlock } from '../../lib/blocks/collections-filter';

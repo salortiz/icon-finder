@@ -9,7 +9,7 @@ import {
 import type { FullSearchRoute } from '../route/types/routes';
 import type { SearchResults } from '../converters/search';
 import { dataToSearchResults } from '../converters/search';
-import { IconsListBlock, defaultIconsListBlock } from '../blocks/icons-list';
+import { type IconsListBlock, defaultIconsListBlock } from '../blocks/icons-list';
 import type { PaginationBlock } from '../blocks/pagination';
 import { defaultPaginationBlock, maxPage } from '../blocks/pagination';
 import { getRegistry } from '../registry/storage';

@@ -224,7 +224,7 @@ export class BaseView {
 	 *
 	 * Should be overwritten by child classes
 	 */
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars-experimental, @typescript-eslint/no-unused-vars
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	_parseAPIData(data: unknown): void {
 		throw new Error('_parseAPIData should not be called on base view');
 	}
