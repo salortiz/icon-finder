@@ -57,7 +57,7 @@
 		font-size: $iif-footer-icon-name-sample-size;
 		width: 1em;
 		height: 1em;
-		margin: (0 - $iif-footer-icon-name-sample-size / 2) 0 0;
+		margin: (0 - $iif-footer-icon-name-sample-size * 0.5) 0 0;
 
 		color: $iif-footer-icon-name-sample-color;
 	}
@@ -101,9 +101,9 @@
 
 			left: 0;
 			right: 0;
-			top: ($iif-input-height - $iif-input-line-height) / 2 -
+			top: ($iif-input-height - $iif-input-line-height) * 0.5 -
 				$iif-input-border-width;
-			bottom: ($iif-input-height - $iif-input-line-height) / 2 -
+			bottom: ($iif-input-height - $iif-input-line-height) * 0.5 -
 				$iif-input-border-width;
 
 			margin: 0;

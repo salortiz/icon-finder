@@ -23,14 +23,14 @@
 	height: $iif-icons-header-modes-size;
 	box-sizing: border-box;
 	position: absolute;
-	top: ($iif-icons-header-modes-size - $iif-icon-button-size) / 2;
-	right: ($iif-icons-header-modes-size - $iif-icon-button-size) / 2;
+	top: ($iif-icons-header-modes-size - $iif-icon-button-size) * 0.5;
+	right: ($iif-icons-header-modes-size - $iif-icon-button-size) * 0.5;
 
 	button {
 		float: left;
 		padding: (
 				$iif-icons-header-modes-size - $iif-icons-header-modes-icon-size
-			) / 2;
+			) * 0.5;
 
 		svg {
 			font-size: $iif-icons-header-modes-icon-size;

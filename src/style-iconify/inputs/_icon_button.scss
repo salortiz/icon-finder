@@ -2,7 +2,7 @@
 	width: $iif-icon-button-size;
 	height: $iif-icon-button-size;
 	margin: 0;
-	padding: ($iif-icon-button-size - $iif-icon-size) / 2;
+	padding: ($iif-icon-button-size - $iif-icon-size) * 0.5;
 
 	color: $iif-icon-button-color;
 	background: $iif-icon-button-background-color;

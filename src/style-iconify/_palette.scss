@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $_palette-min: 0;
 $_palette-max: 1000;
 $_palette-step: 25;
@@ -1662,8 +1664,8 @@ $_palette_map: (
 	@if type_of($palette) == 'string' {
 		@return nth(
 			map-get($_palette_map, $palette),
-			$shade / $_palette-step + 1
+			math.div($shade, $_palette-step) + 1
 		);
 	}
-	@return nth($palette, $shade / $_palette-step + 1);
+	@return nth($palette, math.div($shade, $_palette-step) + 1);
 }

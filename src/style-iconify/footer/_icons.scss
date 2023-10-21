@@ -23,8 +23,8 @@
 		display: none;
 		position: absolute;
 		font-size: $iif-icon-size;
-		right: 0 - ($iif-icon-size) / 2;
-		top: 0 - ($iif-icon-size) / 2;
+		right: 0 - ($iif-icon-size) * 0.5;
+		top: 0 - ($iif-icon-size) * 0.5;
 		background: inherit;
 		color: inherit;
 		@if $iif-icons-grid-icon-border-width > 0 {

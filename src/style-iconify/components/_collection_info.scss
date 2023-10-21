@@ -9,7 +9,7 @@
 
 	dl {
 		display: flex;
-		margin: $iif-spacing / 2 0;
+		margin: $iif-spacing * 0.5 0;
 		padding: 0;
 		@include iif-font('small', 'normal');
 	}

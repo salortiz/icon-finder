@@ -23,7 +23,7 @@
 	.iif-tab {
 		display: block;
 		padding: $iif-spacing;
-		margin: ($iif-spacing - $iif-border-width) ($iif-spacing / 2)
+		margin: ($iif-spacing - $iif-border-width) ($iif-spacing * 0.5)
 			(0 - $iif-border-width);
 
 		@include iif-font($iif-base-font-size, 'normal');

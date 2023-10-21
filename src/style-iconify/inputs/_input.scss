@@ -45,9 +45,9 @@
 	// Icon
 	.iif-input-icon {
 		position: absolute;
-		left: ($iif-input-height - $iif-input-icon-size) / 2 -
+		left: ($iif-input-height - $iif-input-icon-size) * 0.5 -
 			$iif-input-border-width; // changed for search
-		top: ($iif-input-height - $iif-input-icon-size) / 2 -
+		top: ($iif-input-height - $iif-input-icon-size) * 0.5 -
 			$iif-input-border-width; // changed for search
 		pointer-events: none;
 		color: $iif-input-icon-color;
@@ -95,9 +95,9 @@
 		// right: $iif-input-spacing * 2 + $iif-input-border-width +
 		// 	$iif-input-reset-size;
 		right: $iif-input-spacing + $iif-input-border-width;
-		top: ($iif-input-height - $iif-input-line-height) / 2 -
+		top: ($iif-input-height - $iif-input-line-height) * 0.5 -
 			$iif-input-border-width; // changed for search
-		bottom: ($iif-input-height - $iif-input-line-height) / 2 -
+		bottom: ($iif-input-height - $iif-input-line-height) * 0.5 -
 			$iif-input-border-width; // changed for search
 		white-space: nowrap;
 		overflow: hidden;
@@ -115,9 +115,9 @@
 	.iif-input-reset {
 		position: absolute;
 		// display: none;
-		right: ($iif-input-height - $iif-input-reset-size) / 2 -
+		right: ($iif-input-height - $iif-input-reset-size) * 0.5 -
 			$iif-input-border-width; // changed for search
-		top: ($iif-input-height - $iif-input-reset-size) / 2 -
+		top: ($iif-input-height - $iif-input-reset-size) * 0.5 -
 			$iif-input-border-width; // changed for search
 		width: $iif-input-reset-size;
 		height: $iif-input-reset-size;
@@ -138,7 +138,7 @@
 			display: block;
 			font-size: $iif-input-icon-size;
 			width: 1em;
-			margin: ($iif-input-reset-size - $iif-input-icon-size) / 2;
+			margin: ($iif-input-reset-size - $iif-input-icon-size) * 0.5;
 			padding: 0;
 		}
 	}
@@ -160,9 +160,9 @@
 
 		left: 0;
 		right: 0;
-		top: ($iif-input-height - $iif-input-line-height) / 2 -
+		top: ($iif-input-height - $iif-input-line-height) * 0.5 -
 			$iif-input-border-width; // changed for search
-		bottom: ($iif-input-height - $iif-input-line-height) / 2 -
+		bottom: ($iif-input-height - $iif-input-line-height) * 0.5 -
 			$iif-input-border-width; // changed for search
 
 		margin: 0;
@@ -213,9 +213,9 @@
 
 	.iif-input {
 		.iif-input-icon {
-			left: ($iif-big-input-height - $iif-input-icon-size) / 2 -
+			left: ($iif-big-input-height - $iif-input-icon-size) * 0.5 -
 				$iif-input-border-width;
-			top: ($iif-big-input-height - $iif-input-icon-size) / 2 -
+			top: ($iif-big-input-height - $iif-input-icon-size) * 0.5 -
 				$iif-input-border-width;
 		}
 
@@ -223,16 +223,16 @@
 			font-size: $iif-big-input-font-size;
 			line-height: $iif-big-input-line-height;
 
-			top: ($iif-big-input-height - $iif-big-input-line-height) / 2 -
+			top: ($iif-big-input-height - $iif-big-input-line-height) * 0.5 -
 				$iif-input-border-width;
-			bottom: ($iif-big-input-height - $iif-big-input-line-height) / 2 -
+			bottom: ($iif-big-input-height - $iif-big-input-line-height) * 0.5 -
 				$iif-input-border-width;
 		}
 
 		.iif-input-reset {
-			right: ($iif-big-input-height - $iif-input-reset-size) / 2 -
+			right: ($iif-big-input-height - $iif-input-reset-size) * 0.5 -
 				$iif-input-border-width;
-			top: ($iif-big-input-height - $iif-input-reset-size) / 2 -
+			top: ($iif-big-input-height - $iif-input-reset-size) * 0.5 -
 				$iif-input-border-width;
 		}
 
@@ -240,9 +240,9 @@
 			font-size: $iif-big-input-font-size;
 			line-height: $iif-big-input-line-height;
 
-			top: ($iif-big-input-height - $iif-big-input-line-height) / 2 -
+			top: ($iif-big-input-height - $iif-big-input-line-height) * 0.5 -
 				$iif-input-border-width;
-			bottom: ($iif-big-input-height - $iif-big-input-line-height) / 2 -
+			bottom: ($iif-big-input-height - $iif-big-input-line-height) * 0.5 -
 				$iif-input-border-width;
 		}
 

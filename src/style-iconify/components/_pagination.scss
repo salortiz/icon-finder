@@ -9,7 +9,7 @@
 		display: inline-block;
 		@include iif-font('base', 'normal');
 		padding: (
-				($iif-pagination-page-height - $iif-base-line-height) / 2 -
+				($iif-pagination-page-height - $iif-base-line-height) * 0.5 -
 					$iif-pagination-border-width
 			)
 			$iif-spacing;
@@ -87,14 +87,14 @@
 			position: absolute;
 			top: 50%;
 			margin: 0;
-			margin-top: (0 - $iif-pagination-page-height) / 2;
+			margin-top: (0 - $iif-pagination-page-height) * 0.5;
 			width: $iif-pagination-icon-width;
 			padding: (
-					($iif-pagination-page-height - $iif-pagination-icon-size) /
-						2 - $iif-pagination-border-width
+					($iif-pagination-page-height - $iif-pagination-icon-size) *
+						0.5 - $iif-pagination-border-width
 				)
 				(
-					($iif-pagination-icon-width - $iif-pagination-icon-size) / 2 -
+					($iif-pagination-icon-width - $iif-pagination-icon-size) * 0.5 -
 						$iif-pagination-border-width
 				);
 

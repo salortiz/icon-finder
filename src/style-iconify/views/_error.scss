@@ -47,7 +47,7 @@
 		top: 50%;
 		font-size: $iif-error-icon-size;
 		line-height: 1em;
-		margin-top: 0 - ($iif-error-icon-size / 2);
+		margin-top: 0 - ($iif-error-icon-size * 0.5);
 	}
 	svg + p {
 		margin-left: $iif-error-icon-size + $iif-spacing * 1.5;

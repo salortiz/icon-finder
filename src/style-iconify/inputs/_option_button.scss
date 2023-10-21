@@ -10,7 +10,7 @@
 	min-width: $iif-input-height;
 	margin: 0;
 	padding: (
-			($iif-input-height - $iif-base-line-height) / 2 -
+			($iif-input-height - $iif-base-line-height) * 0.5 -
 				$iif-button-border-width
 		)
 		$iff-option-button-padding-left;

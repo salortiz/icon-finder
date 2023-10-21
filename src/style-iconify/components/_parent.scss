@@ -4,7 +4,7 @@
 		border-radius: $iif-parent-border-radius;
 		background: $iif-parent-background-color;
 		margin: $iif-spacing 0;
-		padding: 0 ($iif-spacing / 2);
+		padding: 0 ($iif-spacing * 0.5);
 	}
 	color: $iif-parent-color;
 
@@ -12,8 +12,8 @@
 
 	.iif-parent-link {
 		display: block;
-		margin: ($iif-spacing / 2) 0;
-		padding: ($iif-spacing / 2);
+		margin: ($iif-spacing * 0.5) 0;
+		padding: ($iif-spacing * 0.5);
 		position: relative;
 
 		a {
@@ -30,7 +30,7 @@
 			position: absolute;
 			left: 2px;
 			top: 50%;
-			margin-top: 0 - $iif-parent-icon-size / 2;
+			margin-top: 0 - $iif-parent-icon-size * 0.5;
 			transition: left 0.2s ease;
 			pointer-events: none;
 		}

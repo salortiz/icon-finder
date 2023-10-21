@@ -192,7 +192,7 @@ $iif-big-input-icon-spacing: 26px;
 //
 // Filters
 //
-$iif-filter-margin: ($iif-spacing / 2) ($iif-spacing / 2) ($iif-spacing / 2) 0;
+$iif-filter-margin: ($iif-spacing * 0.5) ($iif-spacing * 0.5) ($iif-spacing * 0.5) 0;
 $iif-filter-padding: 2px $iif-spacing;
 
 $iif-filter-font-size: 'small';
@@ -368,7 +368,7 @@ $iif-icons-container-grid-padding: 2px;
 $iif-icons-grid-icon-margin: 4px;
 $iif-icons-grid-icon-size: 48px;
 $iif-icons-grid-icon-compact-size: 36px;
-$iif-icons-grid-selecting-icon-size: $iif-icon-size / 2;
+$iif-icons-grid-selecting-icon-size: $iif-icon-size * 0.5;
 
 // Icon link
 $iif-icons-grid-icon-border-width: max(1px, $iif-border-width);
@@ -419,7 +419,7 @@ $iif-icons-list-separator-width: 1px;
 $iif-icons-list-highlight-borders: false; // True if borders are used to highlight hover/selected icon (changes behavior of borders)
 
 // Checkbox
-$iif-icons-list-selecting-icon-size: $iif-icon-size / 2;
+$iif-icons-list-selecting-icon-size: $iif-icon-size * 0.5;
 $iif-icons-list-selecting-border-width: 1px;
 $iif-icons-list-selecting-border-color: $iif-simple-border-color;
 
@@ -516,7 +516,7 @@ $iif-pagination-selected-border-color: palette('blue-gray', 600);
 $iif-footer-icon-name-text: 180px;
 $iif-footer-icon-name-sample-size: 32px;
 $iif-footer-icon-name-spacing: $iif-spacing;
-$iif-footer-icon-name-text-padding: $iif-spacing / 2;
+$iif-footer-icon-name-text-padding: $iif-spacing * 0.5;
 
 // Normal
 $iif-footer-icon-name-text-color: $iif-text-dimmed-color;

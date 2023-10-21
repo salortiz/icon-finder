@@ -11,7 +11,7 @@
 	height: $iif-input-height; // changed for search
 	margin: 0 0 0 $iif-spacing;
 	padding: (
-			($iif-input-height - $iif-button-line-height) / 2 -
+			($iif-input-height - $iif-button-line-height) * 0.5 -
 				$iif-button-border-width
 		)
 		($iif-spacing * 2); // changed for search
@@ -89,7 +89,7 @@
 		font-size: $iif-icon-size;
 		left: $iif-spacing;
 		top: 50%;
-		margin-top: (0 - $iif-icon-size / 2);
+		margin-top: (0 - $iif-icon-size * 0.5);
 		opacity: 0.5;
 	}
 	&:hover svg {
@@ -106,7 +106,7 @@
 		height: $iif-big-input-height;
 		margin: 0 0 0 $iif-spacing;
 		padding: (
-				($iif-big-input-height - $iif-big-button-line-height) / 2 -
+				($iif-big-input-height - $iif-big-button-line-height) * 0.5 -
 					$iif-button-border-width
 			)
 			($iif-spacing * 2);
