@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import type { FullRoute, Icon } from '@iconify/search-core';
 	import IconComponent from '@iconify/svelte';
 	import { iconToString } from '@iconify/search-core';

@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import { getContext } from 'svelte';
 	import Icon from '@iconify/svelte';
 	import { getProvider } from '@iconify/search-core';

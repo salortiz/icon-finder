@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import { getContext } from 'svelte';
 	import type { IconifyIconCustomisations } from '@iconify/svelte';
 	import IconComponent from '@iconify/svelte';

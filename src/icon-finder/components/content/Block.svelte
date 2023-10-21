@@ -1,4 +1,4 @@
-<script type="typescript">
+<script lang="ts">
 	// Block type
 	export let type = '';
 

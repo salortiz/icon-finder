@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import type { FiltersFilter } from '@iconify/search-core';
 	import { maxIndex } from '../../config/theme';
 

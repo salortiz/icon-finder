@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
 	import { phrases } from '../../../../../config/phrases';
 	import Input from '../../../../ui/Input.svelte';

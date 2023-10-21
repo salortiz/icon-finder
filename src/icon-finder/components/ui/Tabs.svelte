@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import { maxIndex } from '../../config/theme';
 	import type { Tab } from '../types';
 	import UIIcon from './UIIcon.svelte';

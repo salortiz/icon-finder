@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import { setContext } from 'svelte';
 	import type { FullRoute, ViewBlocks } from '@iconify/search-core';
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';

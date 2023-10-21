@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import { getContext } from 'svelte';
 	import type { CollectionInfoBlock } from '@iconify/search-core';
 	import type { CollectionInfo } from '@iconify/search-core/lib/converters/info';

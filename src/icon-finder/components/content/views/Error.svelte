@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import { getContext } from 'svelte';
 	import type { FullRoute } from '@iconify/search-core';
 	import type { WrappedRegistry } from '../../../wrapper/registry';

@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import UIIcon from '../../../ui/UIIcon.svelte';
 
 	// Link text

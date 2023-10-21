@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import type { UITranslationAddForm } from '../../phrases/types';
 	import Input from './Input.svelte';
 	import UIIcon from './UIIcon.svelte';

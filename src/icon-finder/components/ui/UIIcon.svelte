@@ -1,8 +1,8 @@
-<script context="module" lang="typescript">
+<script context="module" lang="ts">
 	let firstMount: boolean = true;
 </script>
 
-<script lang="typescript">
+<script lang="ts">
 	import Icon, { loadIcons } from '@iconify/svelte';
 	import { onMount } from 'svelte';
 	import { icons, iconsClass } from '../../config/theme';

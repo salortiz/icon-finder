@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { phrases } from '../../../../config/phrases';
 	import type { IconsListMode } from '../../../types';

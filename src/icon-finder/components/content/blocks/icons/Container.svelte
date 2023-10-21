@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import { getContext, onMount } from 'svelte';
 	import { getIcon, loadIcons } from '@iconify/svelte';
 	import {

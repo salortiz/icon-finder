@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import type { CollectionInfo } from '@iconify/search-core/lib/converters/info';
 	import Item from './Item.svelte';
 

@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import type { FullRoute, ViewBlocks } from '@iconify/search-core';
 	import { listProviders } from '@iconify/search-core';
 	import type { SelectedIcons } from '../../wrapper/icons';

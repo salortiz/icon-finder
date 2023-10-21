@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import { calculateSize } from '@iconify/svelte';
 	import type { Icon } from '@iconify/search-core';
 	import { iconToString } from '@iconify/search-core';

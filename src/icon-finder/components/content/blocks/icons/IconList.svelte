@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import IconComponent, { getIcon } from '@iconify/svelte';
 	import type { Icon } from '@iconify/search-core';
 	import type { IconifyIcon } from '@iconify/types';

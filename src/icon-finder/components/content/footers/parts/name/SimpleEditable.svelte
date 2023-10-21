@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import { getContext, onDestroy } from 'svelte';
 	import IconComponent, { iconExists, loadIcons } from '@iconify/svelte';
 	import type { FullRoute, Icon } from '@iconify/search-core';
