@@ -5,7 +5,9 @@
 		iconToString,
 		cloneObject,
 		compareObjects,
-		getProvider,
+		getProvider
+	} from '@iconify/search-core';
+	import type {
 		ViewBlocks,
 		Icon,
 		FullRoute,
