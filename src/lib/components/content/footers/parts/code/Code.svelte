@@ -102,7 +102,7 @@
 				{#if codePhrases.component[key]}
 					<p>{codePhrases.component[key]}</p>
 				{/if}
-				<SampleInput content={output.component[key]} />
+				<SampleInput content={output.component[key] || ''} />
 			{/if}
 		{/each}
 	{/if}
