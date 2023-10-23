@@ -7,7 +7,7 @@ import type { IconifyAPIConfig, PartialIconifyAPIConfig } from '@iconify/iconify
 import { initRedundancy } from '@iconify/api-redundancy';
 import type { Redundancy } from '@iconify/api-redundancy';
 import { Iconify } from '../iconify';
-import { matchName } from '@iconify/utils/lib/icon';
+import { matchIconName } from '@iconify/utils/lib/icon/name';
 
 // Export imported types
 export type { APIProviderRawDataLinks, APIProviderRawDataNPM, APIProviderRawData };
@@ -121,7 +121,7 @@ export function convertProviderData(
 	if (
 		typeof provider !== 'string' ||
 		// Allow empty string
-		(provider !== '' && !provider.match(matchName))
+		(provider !== '' && !provider.match(matchIconName))
 	) {
 		return null;
 	}
