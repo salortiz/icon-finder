@@ -1,4 +1,4 @@
-import type { FullIconifyIcon } from '@iconify/utils/lib/icon';
+import type { FullIconifyIcon } from '@iconify/utils/lib/icon/defaults';
 import { iconToSVG } from '@iconify/utils/lib/svg/build';
 import type { IconCustomisations } from '../misc/customisations';
 

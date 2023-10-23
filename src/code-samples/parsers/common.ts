@@ -5,6 +5,7 @@ import {
 import type { Icon } from '../../misc/icon';
 import type { CodeSampleAPIConfig } from '../types';
 
+type ICK = keyof IconCustomisations;
 /**
  * Convert icon name to variable
  */
@@ -61,7 +62,7 @@ export function toString(value: unknown): string {
 /**
  * List of attributes
  */
-const baseCustomisationAttributes: (keyof IconCustomisations)[] = [
+const baseCustomisationAttributes: ICK[] = [
 	'width',
 	'height',
 	'rotate',
@@ -72,7 +73,7 @@ const baseCustomisationAttributes: (keyof IconCustomisations)[] = [
 export function getCustomisationAttributes(
 	color: boolean,
 	inline: boolean
-): (keyof IconCustomisations)[] {
+): ICK[] {
 	const results = baseCustomisationAttributes.slice(0);
 	if (color) {
 		results.push('color');
@@ -92,7 +93,7 @@ export function getCustomisationAttributes(
 /**
  * Filter customisations
  */
-export type CustomisationsList = Set<keyof IconCustomisations | 'onlyHeight'>;
+export type CustomisationsList = Set<ICK | 'onlyHeight'>;
 export function getCustomisationsList(
 	customisations: IconCustomisations
 ): CustomisationsList {
@@ -196,7 +197,7 @@ export function npmIconImport(
  */
 // Storage for parsed attribute
 interface ParsedAttributeObject {
-	key: string;
+	key: ICK; //string;
 	value: string;
 	syntax?: string;
 }
@@ -207,7 +208,7 @@ type ParsedAttribute = string | ParsedAttributeObject;
 // Attr
 export type ParserAttr = Record<string, ParsedAttribute>;
 
-export function addAttr(list: ParserAttr, key: string, value: string): void {
+export function addAttr(list: ParserAttr, key: ICK /*string*/, value: string): void {
 	list[key] = {
 		key,
 		value,
@@ -216,7 +217,7 @@ export function addAttr(list: ParserAttr, key: string, value: string): void {
 
 export function addDynamicAttr(
 	list: ParserAttr,
-	key: string,
+	key: ICK, // string,
 	anyValue: unknown,
 	syntax?: string
 ): void {
@@ -243,7 +244,7 @@ export function addDynamicAttr(
 
 export function addReactAttr(
 	list: ParserAttr,
-	key: string,
+	key: ICK, //string,
 	value: unknown
 ): void {
 	if (typeof value === 'string' && key !== 'icon') {
@@ -255,7 +256,7 @@ export function addReactAttr(
 
 export function addVueAttr(
 	list: ParserAttr,
-	key: string,
+	key: ICK, // string,
 	value: unknown
 ): void {
 	if (typeof value === 'string' && key !== 'icon') {
@@ -267,7 +268,7 @@ export function addVueAttr(
 
 export function addEmberAttr(
 	list: ParserAttr,
-	key: string,
+	key: ICK, // string,
 	value: unknown
 ): void {
 	if (typeof value === 'string') {
@@ -282,7 +283,7 @@ export function addEmberAttr(
  */
 export function mergeAttr(
 	list: ParserAttr,
-	key: string,
+	key: ICK, // string,
 	value: string,
 	separator: string
 ): void {
@@ -310,7 +311,7 @@ export function mergeAttributes(list: ParserAttr): string {
 					? item.syntax
 					: '{var}="{value}"'
 				)
-					.replace('{var}', item.key)
+					.replace('{var}', item.key as string)
 					.replace('{value}', item.value);
 			}
 			return item;
