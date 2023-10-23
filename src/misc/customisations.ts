@@ -1,8 +1,8 @@
 import {
-	type IconifyIconCustomisations,
-	defaults,
-	mergeCustomisations as merge,
-} from '@iconify/utils/lib/customisations';
+	defaultIconCustomisations,
+	type IconifyIconCustomisations, type IconifyIconSize
+} from '@iconify/utils/lib/customisations/defaults';
+import { mergeCustomisations as merge } from '@iconify/utils/lib/customisations/merge';
 
 /**
  * Customisations
@@ -14,7 +14,9 @@ interface CoreIconCustomisations {
 
 export interface IconCustomisations
 	extends Required<IconifyIconCustomisations>,
-		CoreIconCustomisations {}
+	CoreIconCustomisations {
+		[k:string]: IconifyIconSize | boolean
+	}
 
 export type PartialIconCustomisations = Partial<IconCustomisations>;
 
@@ -29,7 +31,7 @@ const emptyCustomValues: CoreIconCustomisations = {
  * Empty values
  */
 export const emptyCustomisations: IconCustomisations = {
-	...defaults,
+	...defaultIconCustomisations,
 	...emptyCustomValues,
 };
 

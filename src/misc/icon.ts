@@ -1,8 +1,9 @@
 import {
 	type IconifyIconName,
 	stringToIcon as convert,
-	validateIcon,
+	validateIconName
 } from '@iconify/utils/lib/icon/name';
+export { validateIconName as validateIcon };
 
 /**
  * Optional data used to categorise it
@@ -24,11 +25,6 @@ interface IconArrays {
 export interface Icon extends IconifyIconName, IconArrays {}
 
 /**
- * Expression to test part of icon name.
- */
-export const match = /^[a-z0-9]+(-[a-z0-9]+)*$/;
-
-/**
  * Convert string to Icon object.
  */
 export const stringToIcon = (
@@ -38,11 +34,6 @@ export const stringToIcon = (
 ): Icon | null => {
 	return convert(value, validate, false, provider);
 };
-
-/**
- * Check if icon is valid.
- */
-export { validateIcon };
 
 /**
  * Compare Icon objects.
