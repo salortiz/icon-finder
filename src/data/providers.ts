@@ -4,8 +4,8 @@ import type {
 	APIProviderRawData,
 } from '@iconify/types/provider';
 import type { IconifyAPIConfig, PartialIconifyAPIConfig } from '@iconify/iconify';
-import { initRedundancy } from '@cyberalien/redundancy';
-import type { Redundancy } from '@cyberalien/redundancy';
+import { initRedundancy } from '@iconify/api-redundancy';
+import type { Redundancy } from '@iconify/api-redundancy';
 import { Iconify } from '../iconify';
 import { matchName } from '@iconify/utils/lib/icon';
 

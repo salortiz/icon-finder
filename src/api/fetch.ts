@@ -1,7 +1,4 @@
-import type {
-	PendingQueryItem,
-	QueryDoneCallback,
-} from '@cyberalien/redundancy';
+import type { QueryDoneCallback, QueryModuleResponse } from '@iconify/api-redundancy';
 import { BaseAPI } from './base';
 
 /**
@@ -81,16 +78,15 @@ export class API extends BaseAPI {
 		cacheKey: string | null,
 		host: string,
 		params: string,
-		item: PendingQueryItem
+		item: QueryModuleResponse
 	): void {
-		// console.log('API request: ' + host + params);
-		this.sendQuery(host, params, (data, error) => {
+		//console.log('API request: ' + host + params, item);
+		this.sendQuery(host, params, (data) => {
 			if (data !== void 0 && cacheKey !== null) {
 				// Store cache on success
 				this.storeCache(provider, cacheKey, data);
 			}
-
-			item.done(data, error);
+			item(data ? 'success' : 'next', data);
 		});
 	}
 }

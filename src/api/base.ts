@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import type {
 	Redundancy,
-	PendingQueryItem,
 	QueryModuleCallback,
-} from '@cyberalien/redundancy';
+	QueryModuleResponse,
+} from '@iconify/api-redundancy';
 import type { Registry } from '../registry';
 import { getProvider } from '../data/providers';
 
@@ -202,7 +202,7 @@ export class BaseAPI {
 		cacheKey: string | null,
 		host: string,
 		params: string,
-		item: PendingQueryItem
+		item: QueryModuleResponse
 	): void {
 		// Should be implemented by child classes
 		throw new Error('_query() should not be called on base API class');
