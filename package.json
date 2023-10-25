@@ -1,50 +1,50 @@
 {
-	"name": "uf-iconfinder",
-	"version": "1.0.0",
-	"private": true,
-  "type": "module",
-	"description": "Uniform iconfinder",
-	"author": "Vjacheslav Trushkin (Iconify OÜ)",
-	"license": "(Apache-2.0 OR GPL-2.0)",
-	"scripts": {
+    "name": "uf-iconfinder",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "description": "Uniform iconfinder",
+    "author": "Vjacheslav Trushkin (Iconify OÜ)",
+    "license": "(Apache-2.0 OR GPL-2.0)",
+    "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "package": "svelte-package",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-		"build:style": "node build/style"
-	},
-	"bugs": "https://github.com/iconify/icon-finder/issues",
-	"homepage": "https://github.com/iconify/icon-finder",
-	"repository": "github:iconify/icon-finder#base-svelte",
-  "peerDependencies": {
-		"svelte": "^4.0.0"
-	},
-	"devDependencies": {
-		"@iconify/search-core": "^1.2.0",
-		"@iconify/svelte": "^2.2.1",
-		"@iconify/types": "^1.1.0",
-		"@iconify/utils": "^1.0.33",
-    "@sveltejs/adapter-auto": "^2.1.0",
-		"@sveltejs/kit": "^1.25.1",
-		"@sveltejs/package": "^2.2.2",
-    "sass": "^1.69.4",
-    "node-sass": "^9.0.0",
-		"nodemon": "^2.0.22",
-		"svelte-loader": "^2.13.6",
-		"svelte-preprocess": "^5.0.4",
-    "@sveltejs/vite-plugin-svelte": "^2.4.2",
-    "@tsconfig/svelte": "^5.0.0",
-    "svelte": "^4.0.5",
-    "svelte-check": "^3.4.6",
-    "tslib": "^2.6.0",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5"
-	},
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "svelte": "./dist/index.js"
+        "build:style": "node build/style"
+    },
+    "bugs": "https://github.com/iconify/icon-finder/issues",
+    "homepage": "https://github.com/iconify/icon-finder",
+    "repository": "github:iconify/icon-finder#base-svelte",
+    "peerDependencies": {
+        "svelte": "^4.0.0"
+    },
+    "devDependencies": {
+        "@iconify/search-core": "^1.2.1",
+        "@iconify/svelte": "^3.1.4",
+        "@iconify/types": "^2.0.0",
+        "@iconify/utils": "^2.1.11",
+        "@sveltejs/adapter-auto": "^2.1.0",
+        "@sveltejs/kit": "^1.25.1",
+        "@sveltejs/package": "^2.2.2",
+        "sass": "^1.69.4",
+        "node-sass": "^9.0.0",
+        "nodemon": "^2.0.22",
+        "svelte-loader": "^2.13.6",
+        "svelte-preprocess": "^5.0.4",
+        "@sveltejs/vite-plugin-svelte": "^2.4.2",
+        "@tsconfig/svelte": "^5.0.0",
+        "svelte": "^4.0.5",
+        "svelte-check": "^3.4.6",
+        "tslib": "^2.6.0",
+        "typescript": "^5.0.2",
+        "vite": "^4.4.5"
+    },
+    "exports": {
+        ".": {
+              "types": "./dist/index.d.ts",
+              "svelte": "./dist/index.js"
+        }
     }
-  }
 }
