@@ -17,4 +17,5 @@
 	});
 </script>
 
+<!-- Icon Finder -->
 <div bind:this={container} />

@@ -59,15 +59,6 @@ import { importThemeIcons } from './config/theme';
 // Change import to change container component
 import Container from './components/Container.svelte';
 
-// Adapter for API change
-import { initRedundancy } from '@cyberalien/redundancy';
-const getAPI = (provider: string) => {
-	const redun = _api.getAPIConfig(provider);
-	if(!redun) return;
-	const config = {path: redun.path, maxURL: redun.maxURL};
-	return {redundancy: initRedundancy(redun), config };
-}
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-unused-vars-experimental, @typescript-eslint/no-empty-function
 function assertNever(s: never) {}
 
@@ -76,7 +67,7 @@ function assertNever(s: never) {}
 const functions: Omit<Required<CoreIconifyFunctions>, 'getVersion'> = {
 	getIcon,
 	addCollection,
-	getAPI,
+	getAPIConfig: _api.getAPIConfig,
 	addAPIProvider,
 };
 setIconify(functions);
@@ -150,7 +141,6 @@ export class Wrapper {
 
 		// Callback
 		registry.setCustom('callback', this._internalCallback.bind(this));
-
 		// External link callback
 		registry.setCustom('link', this._externalLinkCallback.bind(this));
 
