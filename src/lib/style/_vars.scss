@@ -212,7 +212,7 @@ $iif-filter-border-radius: $iif-border-radius-small;
 // Normal status - based on palette
 $iif-filter-color-shade: dcolor($iif-dark, 0);
 $iif-filter-background-shade: dcolor($iif-dark, 600);
-$iif-filter-border-shade: dcolor($iif-dart, 0); // Ignored because radius is 0. Change value if radius is changed
+$iif-filter-border-shade: dcolor($iif-dark, 0); // Ignored because radius is 0. Change value if radius is changed
 
 // Hover status - red
 $iif-filter-hover-color: palette('gray', dcolor($iif-dark, 0));
