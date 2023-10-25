@@ -22,18 +22,26 @@ $iif-medium-line-height: 26px;
 $iif-large-font-size: 22px;
 $iif-large-line-height: 32px;
 
+$iif-dark: false;
+@function dcolor($dark, $base) {
+	@if $dark {
+		@return 1000 - $base;
+	}
+	@return $base;
+}
+
 // Main palette
-$iif-background-color: palette('gray', 0);
-$iif-background-color2: palette('gray', 25);
-$iif-background-color3: palette('gray', 0);
+$iif-background-color: palette('gray', dcolor($iif-dark, 0));
+$iif-background-color2: palette('gray', dcolor($iif-dark, 25));
+$iif-background-color3: palette('gray', dcolor($iif-dark, 0));
 
-$iif-text-color: palette('gray', 850);
-$iif-text-muted-color: palette('gray', 400);
-$iif-text-dimmed-color: palette('gray', 600);
-$iif-text-faint-color: palette('gray', 200);
+$iif-text-color: palette('gray', dcolor($iif-dark, 850));
+$iif-text-muted-color: palette('gray', dcolor($iif-dark, 400));
+$iif-text-dimmed-color: palette('gray', dcolor($iif-dark, 600));
+$iif-text-faint-color: palette('gray', dcolor($iif-dark, 200));
 
-$iif-simple-border-color: palette('gray', 100);
-$iif-solid-border-color: palette('gray', 150);
+$iif-simple-border-color: palette('gray', dcolor($iif-dark, 100));
+$iif-solid-border-color: palette('gray', dcolor($iif-dark, 150));
 
 // Rotation
 $iif-rotation-palettes: $rotation;
@@ -42,7 +50,7 @@ $iif-rotation-default-palette: 'light-blue';
 
 // Links
 $iif-link-palette: 'blue';
-$iif-link-shade: 600;
+$iif-link-shade: dcolor($iif-dark, 600);
 $iif-link-hover-palette: 'red';
 $iif-link-hover-shade: $iif-link-shade;
 
@@ -50,7 +58,7 @@ $iif-link-color: palette($iif-link-palette, $iif-link-shade);
 $iif-link-hover-color: palette($iif-link-hover-palette, $iif-link-hover-shade);
 
 // Borders
-$iif-border-focus-color: palette($iif-link-palette, 150);
+$iif-border-focus-color: palette($iif-link-palette, dcolor($iif-dark, 150));
 $iif-border-width: 1px;
 $iif-border-radius-small: 2px;
 $iif-border-radius-medium: 5px;
@@ -104,11 +112,11 @@ $iif-input-focus-color: $iif-input-color;
 
 // Input Selection
 $iif-input-selection-color: $iif-input-color;
-$iif-input-selection-background-color: palette($iif-link-palette, 150);
+$iif-input-selection-background-color: palette($iif-link-palette, dcolor($iif-dark, 150));
 
 // Input placeholder
 $iif-input-placeholder-color: $iif-text-faint-color;
-$iif-input-placeholder-icon-color: palette('gray', 300);
+$iif-input-placeholder-icon-color: palette('gray', dcolor($iif-dark, 300));
 
 // Input Icon
 $iif-input-icon-color: $iif-input-placeholder-color;
@@ -125,42 +133,42 @@ $iif-button-border-color: $iif-input-border-color;
 $iif-button-color: $iif-input-color;
 
 // Primary button
-$iif-button-primary-background-color: palette($iif-link-palette, 600);
+$iif-button-primary-background-color: palette($iif-link-palette, dcolor($iif-dark, 600));
 $iif-button-primary-border-color: $iif-button-primary-background-color;
-$iif-button-primary-color: palette('gray', 0);
+$iif-button-primary-color: palette('gray', dcolor($iif-dark, 0));
 
 $iif-button-primary-hover-background-color: palette(
 	$iif-link-hover-palette,
-	600
+	dcolor($iif-dark, 600)
 );
 $iif-button-primary-hover-border-color: $iif-button-primary-hover-background-color;
-$iif-button-primary-hover-color: palette('gray', 0);
+$iif-button-primary-hover-color: palette('gray', dcolor($iif-dark, 0));
 
 // Secondary button
 $iif-button-secondary-background-color: $iif-background-color2;
-$iif-button-secondary-border-color: palette('gray', 100);
+$iif-button-secondary-border-color: palette('gray', dcolor($iif-dark, 100));
 $iif-button-secondary-color: $iif-text-muted-color;
 
 // Checked button
-$iif-button-checked-background-color: palette($iif-link-palette, 600);
+$iif-button-checked-background-color: palette($iif-link-palette, dcolor($iif-dark, 600));
 $iif-button-checked-border-color: $iif-button-checked-background-color;
-$iif-button-checked-color: palette($iif-link-palette, 0);
+$iif-button-checked-color: palette($iif-link-palette, dcolor($iif-dark, 0));
 
 $iif-button-checked-hover-background-color: palette(
 	$iif-link-hover-palette,
-	600
+	dcolor($iif-dark, 600)
 );
 $iif-button-checked-hover-border-color: $iif-button-checked-hover-background-color;
-$iif-button-checked-hover-color: palette($iif-link-hover-palette, 0);
+$iif-button-checked-hover-color: palette($iif-link-hover-palette, dcolor($iif-dark, 0));
 
 $iif-button-checked-focused-background-color: palette($iif-link-palette, 500);
 $iif-button-checked-focused-border-color: $iif-button-checked-background-color;
 $iif-button-checked-focused-color: $iif-button-checked-color;
 
 // Destructive button
-$iif-button-destructive-background-color: palette('red', 600);
+$iif-button-destructive-background-color: palette('red', dcolor($iif-dark, 600));
 $iif-button-destructive-border-color: $iif-button-destructive-background-color;
-$iif-button-destructive-color: palette('red', 0);
+$iif-button-destructive-color: palette('red', dcolor($iif-dark, 0));
 
 // Button hover
 $iif-button-hover-background-color: $iif-input-hover-background-color;
@@ -202,25 +210,25 @@ $iif-filter-border-width: 0;
 $iif-filter-border-radius: $iif-border-radius-small;
 
 // Normal status - based on palette
-$iif-filter-color-shade: 0;
-$iif-filter-background-shade: 600;
-$iif-filter-border-shade: 0; // Ignored because radius is 0. Change value if radius is changed
+$iif-filter-color-shade: dcolor($iif-dark, 0);
+$iif-filter-background-shade: dcolor($iif-dark, 600);
+$iif-filter-border-shade: dcolor($iif-dart, 0); // Ignored because radius is 0. Change value if radius is changed
 
 // Hover status - red
-$iif-filter-hover-color: palette('gray', 0);
-$iif-filter-hover-background-color: palette($iif-link-hover-palette, 600);
+$iif-filter-hover-color: palette('gray', dcolor($iif-dark, 0));
+$iif-filter-hover-background-color: palette($iif-link-hover-palette, dcolor($iif-dark, 600));
 $iif-filter-hover-border-color: $iif-filter-hover-background-color;
 
 // Focus
 $iif-filter-focus-color: palette($iif-link-palette, $iif-link-shade);
-$iif-filter-focus-background-color: palette($iif-link-palette, 0);
+$iif-filter-focus-background-color: palette($iif-link-palette, dcolor($iif-dark, 0));
 $iif-filter-focus-border-color: $iif-border-focus-color;
 $iif-filter-focus-shadow: 0 0 0 2px $iif-border-focus-color inset;
 
 // Unselected
-$iif-filter-unselected-color: palette('gray', 0);
-$iif-filter-unselected-background-color: palette('gray', 300);
-$iif-filter-unselected-border-color: palette('gray', 300);
+$iif-filter-unselected-color: palette('gray', dcolor($iif-dark, 0));
+$iif-filter-unselected-background-color: palette('gray', dcolor($iif-dark, 300));
+$iif-filter-unselected-border-color: palette('gray', dcolor($iif-dark, 300));
 
 // Unselected + focus
 $iif-filter-unselected-focus-color: palette('gray', $iif-link-shade);
@@ -235,11 +243,11 @@ $iif-filter-selected-focus-color: palette(
 );
 $iif-filter-selected-focus-background-color: palette(
 	$iif-link-hover-palette,
-	0
+	dcolor($iif-dark, 0)
 );
-$iif-filter-selected-focus-border-color: palette($iif-link-hover-palette, 0);
+$iif-filter-selected-focus-border-color: palette($iif-link-hover-palette, dcolor($iif-dark, 0));
 $iif-filter-selected-focus-shadow: 0 0 0 2px
-	palette($iif-link-hover-palette, 150) inset;
+	palette($iif-link-hover-palette, dcolor($iif-dark, 150)) inset;
 
 //
 // Collections list
@@ -270,8 +278,8 @@ $iif-collection-author-height: 24px;
 $iif-collection-author-color: $iif-text-muted-color;
 
 // Stats
-$iif-collection-stats-color: palette('gray', 0);
-$iif-collection-background-shade: 600;
+$iif-collection-stats-color: palette('gray', dcolor($iif-dark, 0));
+$iif-collection-background-shade: dcolor($iif-dark, 600);
 $iif-collection-stats-overlay-background: rgba(
 	255,
 	255,
@@ -284,9 +292,9 @@ $iif-collection-stats-hover-color: $iif-text-dimmed-color;
 //
 // Error
 //
-$iif-error-color: palette('gray', 0);
-$iif-error-background-color: palette('red', 600);
-$iif-error-loading-background-color: palette('blue-gray', 600);
+$iif-error-color: palette('gray', dcolor($iif-dark, 0));
+$iif-error-background-color: palette('red', dcolor($iif-dark, 600));
+$iif-error-loading-background-color: palette('blue-gray', dcolor($iif-dark, 600));
 
 $iif-error-border-radius: $iif-border-radius-medium;
 $iif-error-box-shadow: 0 5px 17px rgba(0, 0, 0, 0.2),
@@ -394,14 +402,14 @@ $iif-icons-grid-icon-focus-border-color: $iif-border-focus-color;
 // Selected
 $iif-icons-grid-icon-selected-color: $iif-text-color;
 $iif-icons-grid-icon-selected-background-color: $iif-background-color3;
-$iif-icons-grid-icon-selected-border-color: palette($iif-link-palette, 300);
+$iif-icons-grid-icon-selected-border-color: palette($iif-link-palette, dcolor($iif-dark, 300));
 
 // Selected, hover
 $iif-icons-grid-icon-selected-hover-color: $iif-link-hover-color;
 $iif-icons-grid-icon-selected-hover-background-color: $iif-icons-grid-icon-selected-background-color;
 $iif-icons-grid-icon-selected-hover-border-color: palette(
 	$iif-link-hover-palette,
-	300
+	dcolor($iif-dark, 300)
 );
 
 //
@@ -443,15 +451,15 @@ $iif-icons-list-size-color: $iif-text-muted-color;
 $iif-icons-list-row-hover-color: $iif-link-color;
 $iif-icons-list-row-hover-sample-color: $iif-link-color;
 $iif-icons-list-row-hover-background-color: $iif-background-color2;
-$iif-icons-list-row-hover-separator-color: palette($iif-link-palette, 300);
-$iif-icons-list-row-hover-left-border-color: palette($iif-link-palette, 300);
+$iif-icons-list-row-hover-separator-color: palette($iif-link-palette, dcolor($iif-dark, 300));
+$iif-icons-list-row-hover-left-border-color: palette($iif-link-palette, dcolor($iif-dark, 300));
 
 // Selected icon
 $iif-icons-list-selected-color: $iif-link-color;
 $iif-icons-list-selected-sample-color: $iif-link-color;
 $iif-icons-list-selected-background-color: $iif-background-color2;
 $iif-icons-list-selected-separator-color: transparent;
-$iif-icons-list-selected-left-border-color: palette('gray', 300);
+$iif-icons-list-selected-left-border-color: palette('gray', dcolor($iif-dark, 300));
 
 // Selected row hover
 $iif-icons-list-selected-row-hover-color: $iif-icons-list-row-hover-color;
@@ -459,11 +467,11 @@ $iif-icons-list-selected-row-hover-sample-color: $iif-icons-list-selected-sample
 $iif-icons-list-selected-row-hover-background-color: $iif-icons-list-row-hover-background-color;
 $iif-icons-list-selected-row-hover-separator-color: palette(
 	$iif-link-hover-palette,
-	300
+	dcolor($iif-dark, 300)
 );
 $iif-icons-list-selected-row-hover-left-border-color: palette(
 	$iif-link-hover-palette,
-	300
+	dcolor($iif-dark, 300)
 );
 
 // Hover color
@@ -496,9 +504,9 @@ $iif-pagination-background-color: $iif-background-color3;
 $iif-pagination-border-color: $iif-simple-border-color;
 
 // Hover
-$iif-pagination-hover-color: palette('gray', 0);
-$iif-pagination-hover-background-color: palette($iif-link-hover-palette, 600);
-$iif-pagination-hover-border-color: palette($iif-link-hover-palette, 600);
+$iif-pagination-hover-color: palette('gray', dcolor($iif-dark, 0));
+$iif-pagination-hover-background-color: palette($iif-link-hover-palette, dcolor($iif-dark, 600));
+$iif-pagination-hover-border-color: palette($iif-link-hover-palette, dcolor($iif-dark, 600));
 
 // Focus
 $iif-pagination-focus-color: $iif-link-color;
@@ -506,9 +514,9 @@ $iif-pagination-focus-background-color: $iif-background-color2;
 $iif-pagination-focus-border-color: $iif-border-focus-color;
 
 // Selected
-$iif-pagination-selected-color: palette('gray', 0);
-$iif-pagination-selected-background-color: palette('blue-gray', 600);
-$iif-pagination-selected-border-color: palette('blue-gray', 600);
+$iif-pagination-selected-color: palette('gray', dcolor($iif-dark, 0));
+$iif-pagination-selected-background-color: palette('blue-gray', dcolor($iif-dark, 600));
+$iif-pagination-selected-border-color: palette('blue-gray', dcolor($iif-dark, 600));
 
 //
 // Footer
@@ -530,5 +538,5 @@ $iif-footer-icon-name-sample-hover-box-shadow: $iif-simple-border-color;
 //
 // Success notice
 //
-$iif-success-notice-background: palette('green', 600);
-$iif-success-notice-text: palette('green', 0);
+$iif-success-notice-background: palette('green', dcolor($iif-dark, 600));
+$iif-success-notice-text: palette('green', dcolor($iif-dark, 50));
