@@ -9,13 +9,6 @@
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
 	import type { WrappedRegistry } from '../../../wrapper/registry';
 	import { phrases } from '../../../config/phrases';
-	import {
-		showCollectionInfoBlock,
-		showButtons,
-		showInfoInFooter,
-		showCustomisatons,
-		showCode,
-	} from '../../../config/components';
 	import Block from '../Block.svelte';
 	import ButtonsContainer from './parts/Buttons.svelte';
 	import PropertiesContainer from './parts/Properties.svelte';
@@ -49,6 +42,16 @@
 
 	// Registry
 	const registry = getContext('registry') as WrappedRegistry;
+	const finderConfig = registry.config.finder;
+	const {
+		showCollectionInfoBlock,
+		showButtons,
+		showInfoInFooter,
+		showCustomisatons,
+		showCode,
+		footerButtons,
+		canShortenIconName
+	} = finderConfig;
 
 	// Check if icons are selected, get first icon
 	let icon: Icon | null;
@@ -133,7 +136,7 @@
 {#if showButtons || hasIcons}
 	<Block type="footer">
 		{#if icon}
-			<IconName {icon} {route} />
+			<IconName {icon} {route} {canShortenIconName}/>
 		{:else if hasIcons}
 			<IconsList {route} {icons} {customisations} />
 		{/if}
@@ -147,13 +150,13 @@
 			</FooterBlock>
 		{/if}
 		{#if showCustomisatons && hasIcons}
-			<PropertiesContainer {icons} {customise} {customisations} />
+			<PropertiesContainer {icons} {customise} {customisations} {finderConfig}/>
 		{/if}
 		{#if showCode && icon}
 			<CodeBlock {icon} {customisations} />
 		{/if}
 		{#if showButtons}
-			<ButtonsContainer {icons} {route} />
+			<ButtonsContainer {icons} {route} {footerButtons}/>
 		{/if}
 	</Block>
 {/if}

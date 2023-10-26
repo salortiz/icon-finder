@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
 	import type { WrappedRegistry } from '../../../../wrapper/registry';
-	import { canToggleFooterBlocks } from '../../../../config/components';
 	import UIIcon from '../../../ui/UIIcon.svelte';
 
 	// Config key for expanding
@@ -16,6 +15,7 @@
 
 	// Registry
 	const registry = getContext('registry') as WrappedRegistry;
+	const { canToggleFooterBlocks } = registry.config.finder;
 
 	// Get config
 	const config = (registry.config.components as unknown) as Record<

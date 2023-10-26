@@ -3,7 +3,6 @@
 	import type { CollectionInfo, SearchBlock } from '@iconify/search-core';
 	import type { WrappedRegistry } from '../../../wrapper/registry';
 	import { phrases } from '../../../config/phrases';
-	import { canFocusSearch } from '../../../config/components';
 	import Input from '../../ui/Input.svelte';
 	import Block from '../Block.svelte';
 
@@ -21,6 +20,8 @@
 
 	// Registry
 	const registry = getContext('registry') as WrappedRegistry;
+	const { canFocusSearch: CFS } = registry.config.finder;
+	const canFocusSearch = 'function' == typeof CFS ? CFS() : CFS;
 
 	// Phrases
 	const searchPhrases = phrases.search;

@@ -4,7 +4,8 @@
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
 	import type {
 		CodeSampleAPIConfig,
-		CodeSampleMode,
+		CodeSampleKey,
+		CodeSampleMode
 	} from '@iconify/search-core/lib/code-samples/types';
 	import type { CodeOutput } from '@iconify/search-core/lib/code-samples/code';
 	import {
@@ -27,7 +28,7 @@
 	export let providerConfig: CodeSampleAPIConfig;
 
 	// Mode
-	export let mode: CodeSampleMode;
+	export let mode: CodeSampleKey;
 
 	// Registry
 	const registry = getContext('registry') as WrappedRegistry;
@@ -47,7 +48,7 @@
 	let docsText: string;
 	$: {
 		output = getIconCode(
-			mode,
+			mode as CodeSampleMode,
 			icon,
 			customisations,
 			providerConfig

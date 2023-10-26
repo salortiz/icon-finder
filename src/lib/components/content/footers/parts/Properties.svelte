@@ -3,20 +3,12 @@
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
 	import { phrases } from '../../../../config/phrases';
 	import FooterBlock from './FooterBlock.svelte';
-	import {
-		showFooterBlockTitles,
-		customiseColor,
-		customiseWidth,
-		customiseHeight,
-		customiseRotate,
-		customiseFlip,
-		customiseInline,
-	} from '../../../../config/components';
 	import ColorBlock from './props/Color.svelte';
 	import SizeBlock from './props/Size.svelte';
 	import RotateBlock from './props/Rotate.svelte';
 	import FlipBlock from './props/Flip.svelte';
 	import InlineBlock from './props/Inline.svelte';
+	import type { FinderConfig } from '$lib/config/components';
 
 	// Selected icons
 	export let icons: Icon[];
@@ -24,11 +16,23 @@
 	// Customisations
 	export let customisations: IconCustomisations;
 
+	export let finderConfig: FinderConfig;
+
 	// Callback
 	export let customise: (
 		key: keyof IconCustomisations,
 		value: unknown
 	) => void;
+
+	const {
+		showFooterBlockTitles,
+		customiseColor,
+		customiseWidth,
+		customiseHeight,
+		customiseRotate,
+		customiseFlip,
+		customiseInline,
+	} = finderConfig;
 
 	// Title
 	let title: string;
@@ -48,7 +52,7 @@
 				{customise} />
 		{/if}
 		{#if customiseWidth || customiseHeight}
-			<SizeBlock {icons} {customisations} {customise} />
+			<SizeBlock {icons} {customisations} {customise} {finderConfig}/>
 		{/if}
 		{#if customiseFlip}
 			<FlipBlock {customisations} {customise} />
@@ -57,7 +61,7 @@
 			<RotateBlock value={customisations.rotate} {customise} />
 		{/if}
 		{#if customiseInline && icons.length === 1}
-			<InlineBlock value={customisations.inline} {customise} />
+			<InlineBlock value={!!customisations.inline} {customise} />
 		{/if}
 	</div>
 </FooterBlock>

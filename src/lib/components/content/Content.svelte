@@ -2,7 +2,7 @@
 	import type { FullRoute, ViewBlocks } from '@iconify/search-core';
 	import { listProviders } from '@iconify/search-core';
 	import type { SelectedIcons } from '../../wrapper/icons';
-	import { showProviders, canAddProviders } from '../../config/components';
+	import type { FinderConfig } from '../../config/components';
 	import { getActiveProvider } from '../../provider/get-provider';
 	import SearchBlock from './blocks/GlobalSearch.svelte';
 	import ParentBlock from './blocks/Parent.svelte';
@@ -23,7 +23,8 @@
 	export let error: string;
 	export let route: FullRoute;
 	export let blocks: ViewBlocks | null;
-
+	export let finderConfig: FinderConfig;
+	const { showProviders, canAddProviders, showCollectionInfoBlock } =  finderConfig;
 	// Get container class name
 	const baseClass = 'iif-content';
 	let className: string;
@@ -152,7 +153,7 @@
 		{:else if route.type === 'collections'}
 			<CollectionsView {route} {blocks} />
 		{:else if route.type === 'collection'}
-			<CollectionView {route} {blocks} {selection} />
+			<CollectionView {route} {blocks} {selection} {showCollectionInfoBlock}/>
 		{:else if route.type === 'search'}
 			<SearchView {route} {blocks} {selection} />
 		{:else if route.type === 'custom'}

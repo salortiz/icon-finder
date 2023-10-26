@@ -3,7 +3,6 @@
 	import type { FullRoute, Icon } from '@iconify/search-core';
 	import { iconToString } from '@iconify/search-core';
 	import { Iconify } from '@iconify/search-core/lib/iconify';
-	import { canShortenIconName } from '../../../../../config/components';
 	import { getIconGrid } from '../../../../../footer/scale-icon';
 	import { shortenIconName } from '../../../../../footer/shorten-icon-name';
 
@@ -12,6 +11,8 @@
 
 	// Current route
 	export let route: FullRoute;
+
+	export let canShortenIconName: boolean;
 
 	// Get icon name
 	let iconName: string;
@@ -46,9 +47,7 @@
 
 <div class="iif-footer-icon-name iif-footer-icon-name--block">
 	<div class={className}>
-		{#each [iconName] as iconName (iconName)}
-			<IconComponent icon={iconName} />
-		{/each}
+		<IconComponent icon={iconName} />
 	</div>
 	<span>{text}</span>
 </div>

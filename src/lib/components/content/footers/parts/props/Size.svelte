@@ -5,10 +5,9 @@
 	import { Iconify } from '@iconify/search-core/lib/iconify';
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
 	import {
-		customiseWidth,
-		customiseHeight,
 		defaultWidth,
 		defaultHeight,
+		type FinderConfig
 	} from '../../../../../config/components';
 	import OptionsBlock from '../OptionsBlock.svelte';
 	import SizeInput from './SizeInput.svelte';
@@ -19,19 +18,18 @@
 	// Icon customisations
 	export let customisations: IconCustomisations;
 
+	export let finderConfig: FinderConfig;
 	// Callback
 	export let customise: (
 		key: keyof IconCustomisations,
 		value: unknown
 	) => void;
 
+	const { customiseWidth, customiseHeight } = finderConfig;
+
 	// Get customisation type (constants because they cannot be changed at run time)
-	const type =
-		customiseWidth && customiseHeight
-			? 'size'
-			: customiseWidth
-			? 'width'
-			: 'height';
+	const type = customiseWidth && customiseHeight ? 'size'
+			: customiseWidth ? 'width' : 'height';
 
 	type Props = 'width' | 'height';
 	const props: Props[] =

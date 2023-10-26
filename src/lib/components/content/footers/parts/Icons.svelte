@@ -6,7 +6,6 @@
 	import { iconToString } from '@iconify/search-core';
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
 	import type { WrappedRegistry } from '../../../../wrapper/registry';
-	import { canShortenIconName } from '../../../../config/components';
 	import { shortenIconName } from '../../../../footer/shorten-icon-name';
 	import { phrases } from '../../../../config/phrases';
 	import OptionsBlock from './OptionsBlock.svelte';
@@ -29,6 +28,7 @@
 
 	// Registry
 	const registry = getContext('registry') as WrappedRegistry;
+	const { canShortenIconName } = registry.config.finder;
 
 	// Convert icons list to strings
 	interface ListItem {

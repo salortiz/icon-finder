@@ -7,7 +7,7 @@
 	} from '@iconify/search-core';
 	import { getProvider } from '@iconify/search-core';
 	import type { SelectedIcons } from '../../../wrapper/icons';
-	import { showCollectionInfoBlock } from '../../../config/components';
+	import type { FinderConfig } from '../../../config/components';
 	import Filters from '../blocks/Filters.svelte';
 	import CollectionInfoBlock from '../blocks/CollectionInfo.svelte';
 	import IconsWithPages from '../blocks/IconsWithPages.svelte';
@@ -21,6 +21,8 @@
 
 	// Current route
 	export let route: FullCollectionRoute;
+
+	export let showCollectionInfoBlock: FinderConfig['showCollectionInfoBlock'];
 
 	// Filter blocks
 	const filterBlockKeys: (keyof CollectionViewBlocks)[] = [

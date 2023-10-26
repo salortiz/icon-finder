@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount, getContext, onDestroy } from 'svelte';
-	import { loadIcons } from '@iconify/svelte';
+	import { loadIcons, type IconifyIconSize } from '@iconify/svelte';
 	import type { Icon } from '@iconify/search-core';
 	import { iconToString } from '@iconify/search-core';
 	import { Iconify } from '@iconify/search-core/lib/iconify';
@@ -17,11 +17,11 @@
 	 * Select component you need by changing comments
 	 */
 	// Full footer
-	import Footer from './footers/Full.svelte';
+	// import Footer from './footers/Full.svelte';
 
 	// Similar to full, but selected icon (or icons list) is above footer, making it look nicer with small width
 	// Also when multiple icons are selected, it allows selecting icon from selected icons and shows code/customisations for it
-	// import Footer from './footers/Compact.svelte';
+	import Footer from './footers/Compact.svelte';
 
 	// Simple footer: no big sample
 	// import Footer from './footers/Simple.svelte';
@@ -41,7 +41,7 @@
 	const registry = getContext('registry') as WrappedRegistry;
 
 	// Change icon customisation value
-	function customise(prop: keyof IconCustomisations, value: unknown) {
+	function customise(prop: keyof IconCustomisations, value: IconifyIconSize | boolean) {
 		// Convert empty width/height to null
 		switch (prop) {
 			case 'width':

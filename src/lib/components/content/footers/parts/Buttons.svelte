@@ -8,9 +8,11 @@
 		FooterButtonCallbackParams,
 	} from '../../../../footer/types';
 	import { phrases } from '../../../../config/phrases';
-	import { footerButtons } from '../../../../config/components';
+	import type { FinderConfig } from '../../../../config/components';
 	import UIIcon from '../../../ui/UIIcon.svelte';
 
+	// The buttons
+	export let footerButtons: FinderConfig['footerButtons'];
 	// Selected icons
 	export let icons: Icon[];
 

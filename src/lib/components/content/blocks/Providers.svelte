@@ -1,13 +1,11 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
 	import { getProvider } from '@iconify/search-core';
-	// import type { FullRoute } from '@iconify/search-core';
 	import type { WrappedRegistry } from '../../../wrapper/registry';
 	import { phrases } from '../../../config/phrases';
 	import Tabs from '../../ui/Tabs.svelte';
 	import Block from '../Block.svelte';
 	import AddForm from '../../ui/AddForm.svelte';
-	import { canAddProviders } from '../../../config/components';
 	import type { APIProviderError } from '../../../provider/add-provider';
 	import {
 		validateProvider,
@@ -26,7 +24,7 @@
 
 	// Registry
 	const registry = getContext('registry') as WrappedRegistry;
-
+	const { canAddProviders } = registry.config.finder;
 	const providersPhrases = phrases.providers;
 
 	let formVisible: boolean = false;
