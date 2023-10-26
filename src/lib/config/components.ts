@@ -20,6 +20,7 @@ export type FinderConfig = {
 	footerButtons: Record<string, FooterButton>,
 	showCode: false
 }
+export type FinderOptions = Partial<FinderConfig>;
 
 /**
  * Can show and add API providers?
