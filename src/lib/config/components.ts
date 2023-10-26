@@ -1,17 +1,38 @@
 import type { FooterButton, FooterButtonCallbackParams } from '../footer/types';
 
+export type FinderConfig = {
+	showProviders: boolean,
+	canAddProviders: boolean,
+	canFocusSearch: false | (() => boolean),
+	showCollectionInfoBlock: boolean,
+	canShortenIconName: boolean,
+	showFooterBlockTitles: boolean,
+	canToggleFooterBlocks: boolean,
+	showInfoInFooter: boolean,
+	showCustomisatons: boolean,
+	customiseColor: boolean,
+	customiseWidth: boolean,
+	customiseHeight: boolean,
+	customiseRotate: boolean,
+	customiseFlip: boolean,
+	customiseInline: boolean,
+	showButtons: boolean,
+	footerButtons: Record<string, FooterButton>,
+	showCode: false
+}
+
 /**
  * Can show and add API providers?
  */
-export const showProviders = false;
-export const canAddProviders = false;
+const showProviders = false;
+const canAddProviders = false;
 
 /**
  * Automatically focus search
  *
  * Do not change value to true, comment out code below it. It checks for mobile devices
  */
-export const canFocusSearch = false;
+const canFocusSearch = false;
 
 /*
 export const canFocusSearch = (() => {
@@ -33,22 +54,22 @@ export const canFocusSearch = (() => {
  *
  * Also see showInfoInFooter below (need to set both to false to disable icon set info block)
  */
-export const showCollectionInfoBlock = true;
+const showCollectionInfoBlock = true;
 
 /**
  * Can shorten icon name in footer?
  */
-export const canShortenIconName = true;
+const canShortenIconName = true;
 
 /**
  * Show title for footer blocks?
  */
-export const showFooterBlockTitles = false;
+const showFooterBlockTitles = false;
 
 /**
  * Toggle footer blocks?
  */
-export const canToggleFooterBlocks = false;
+const canToggleFooterBlocks = false;
 
 /**
  * Show info block in footer?
@@ -60,29 +81,29 @@ export const canToggleFooterBlocks = false;
  * When browsing icon set, block will be shown only if block above icons
  * list is not shown or when prefix is different or showCollectionInfoBlock is disabled.
  */
-export const showInfoInFooter = true;
+const showInfoInFooter = true;
 
 /**
  * List of properties to customise
  */
 // Global toggle: disables all properties
-export const showCustomisatons = true;
+const showCustomisatons = true;
 
 // Color
-export const customiseColor = true;
+const customiseColor = true;
 
 // Size
-export const customiseWidth = true;
-export const customiseHeight = true;
+const customiseWidth = true;
+const customiseHeight = true;
 
 // Rotation
-export const customiseRotate = true;
+const customiseRotate = true;
 
 // Flip
-export const customiseFlip = true;
+const customiseFlip = true;
 
 // Inline / block
-export const customiseInline = false;
+const customiseInline = false;
 
 /**
  * Default values for color, width and height
@@ -102,9 +123,9 @@ export const iconSampleSize = {
 /**
  * Footer buttons
  */
-export const showButtons = true;
+const showButtons = false; // Show even when no icons selected
 
-export const footerButtons: Record<string, FooterButton> = {
+const footerButtons: Record<string, FooterButton> = {
 	submit: {
 		type: 'primary',
 		display: 'icons', // Show only when icon(s) have been selected
@@ -116,6 +137,28 @@ export const footerButtons: Record<string, FooterButton> = {
 
 /**
  * Sample code
+ * Generate insructions for diferent environments
  */
-// To disable code block, also change link for CodeBlock to Empty.svelte in ../components/footer/*.svelte (it will remove component from bundle)
-export const showCode = false;
+// To disable code block, also change link for CodeBlock to Empty.svelte in ../components/content/footer/*.svelte (it will remove component from bundle)
+const showCode = false;
+
+export const finderDefaultConfig: FinderConfig = {
+	showProviders,
+	canAddProviders,
+	canFocusSearch,
+	showCollectionInfoBlock,
+	canShortenIconName,
+	showFooterBlockTitles,
+	canToggleFooterBlocks,
+	showInfoInFooter,
+	showCustomisatons,
+	customiseColor,
+	customiseWidth,
+	customiseHeight,
+	customiseRotate,
+	customiseFlip,
+	customiseInline,
+	showButtons,
+	footerButtons,
+	showCode
+}
