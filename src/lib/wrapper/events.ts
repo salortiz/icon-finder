@@ -5,6 +5,7 @@ import type {
 } from '@iconify/search-core';
 import type { PartialIconCustomisations } from '@iconify/search-core/lib/misc/customisations';
 import type { IconFinderState } from './state';
+import type { Wrapper } from '$lib/wrapper';
 
 /**
  * Life cycle events
@@ -13,6 +14,7 @@ import type { IconFinderState } from './state';
 // Event triggered when component has been loaded for the first time, ready to be modified
 export interface IconFinderLoadEvent {
 	type: 'load';
+	ctrl: Wrapper;
 }
 
 type IconFinderLifeCycleEvents = IconFinderLoadEvent;

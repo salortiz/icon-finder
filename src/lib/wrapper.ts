@@ -350,6 +350,7 @@ export class Wrapper {
 				this._status = '';
 				this._triggerEvent({
 					type: 'load',
+					ctrl: this
 				});
 			}
 
