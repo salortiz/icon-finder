@@ -33,6 +33,7 @@ import {
 	filterCustomisations,
 	mergeCustomisations,
 } from '@iconify/search-core/lib/misc/customisations';
+import { finderDefaultConfig } from './config/components';
 import type { IconFinderWrapperParams } from './wrapper/params';
 import type { IconFinderState } from './wrapper/state';
 import type { WrapperStatus } from './wrapper/status';
@@ -150,6 +151,8 @@ export class Wrapper {
 		// Set initial state
 		const state = this._state;
 		state.config = customisedConfig(registry.config);
+		// Configure the finder components
+		registry.config.finder = Object.assign({}, finderDefaultConfig, params.finder);
 
 		// Store partial route in state
 		const route = registry.partialRoute;
