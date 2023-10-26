@@ -25,11 +25,12 @@
 
 	// Set context
 	setContext('registry', registry);
+	const finderConfig = registry.config.finder;
 </script>
 
 {#if hidden !== true}
 	<Wrapper>
-		<Content {selection} {viewChanged} {error} {route} {blocks} />
+		<Content {selection} {viewChanged} {error} {route} {blocks} {finderConfig}/>
 		<Footer {selection} {selectionLength} {route} {customisations} />
 	</Wrapper>
 {/if}
