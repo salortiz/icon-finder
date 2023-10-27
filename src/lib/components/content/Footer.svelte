@@ -1,3 +1,23 @@
+<script lang="ts" context="module">
+	/**
+	 * Various footer components
+	 */
+	import FooterFull from './footers/Full.svelte';
+	import FooterCompact from './footers/Compact.svelte';
+	import FooterSimple from './footers/Simple.svelte';
+	import FooterEmpty from './footers/Empty.svelte';
+	import FooterNone from './footers/None.svelte'
+	const FooterMap = {
+		'Full': FooterFull,
+		'Compact': FooterCompact,  // Similar to full, but selected icon (or icons list) is above footer, making it look nicer with small width
+								// Also when multiple icons are selected, it allows selecting icon from selected icons and shows code/customisations for it
+		'Empty': FooterEmpty,	// Empty footer: only buttons
+		'None': FooterNone,		// No footer
+		'Simple': FooterSimple	// Simple footer: no big sample
+	};
+	export type Footers = keyof typeof FooterMap;
+
+</script>
 <script lang="ts">
 	import { onMount, getContext, onDestroy } from 'svelte';
 	import { loadIcons, type IconifyIconSize } from '@iconify/svelte';
@@ -12,24 +32,6 @@
 	import type { WrappedRegistry } from '../../wrapper/registry';
 
 	/**
-	 * Various footer components
-	 *
-	 * Select component you need by changing comments
-	 */
-	// Full footer
-	// import Footer from './footers/Full.svelte';
-
-	// Similar to full, but selected icon (or icons list) is above footer, making it look nicer with small width
-	// Also when multiple icons are selected, it allows selecting icon from selected icons and shows code/customisations for it
-	import Footer from './footers/Compact.svelte';
-
-	// Simple footer: no big sample
-	// import Footer from './footers/Simple.svelte';
-
-	// Empty footer: only buttons
-	// import Footer from './footers/Empty.svelte';
-
-	/**
 	 * Global exports
 	 */
 	export let selection: SelectedIcons;
@@ -39,6 +41,9 @@
 
 	// Registry
 	const registry = getContext('registry') as WrappedRegistry;
+	const { footer } = registry.config.finder;
+	//console.log('Footer', footer);
+	const Footer = FooterMap[footer] as typeof FooterSimple; // Avoid signature warning for None.
 
 	// Change icon customisation value
 	function customise(prop: keyof IconCustomisations, value: IconifyIconSize | boolean) {

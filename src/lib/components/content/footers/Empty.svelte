@@ -12,20 +12,10 @@
 	const registry = getContext('registry') as WrappedRegistry;
 	const { showButtons, footerButtons } = registry.config.finder;
 
-	// Callback
-	// export let customise: (
-	// 	key: keyof IconCustomisations,
-	// 	value: unknown
-	// ) => void;
-
-	// Customisations
-	// export let customisations: IconCustomisations;
-
-	// Current route
 	export let route: FullRoute;
 </script>
 
-{#if showButtons}
+{#if showButtons || icons.length}
 	<Block type="footer">
 		<ButtonsContainer {icons} {route} {footerButtons}/>
 	</Block>

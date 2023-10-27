@@ -1,4 +1,5 @@
 import type { FooterButton, FooterButtonCallbackParams } from '../footer/types';
+import type { Footers } from '$lib/components/content/Footer.svelte';
 
 export type FinderConfig = {
 	showProviders: boolean,
@@ -18,7 +19,8 @@ export type FinderConfig = {
 	customiseInline: boolean,
 	showButtons: boolean,
 	footerButtons: Record<string, FooterButton>,
-	showCode: false
+	showCode: false,
+	footer: Footers
 }
 export type FinderOptions = Partial<FinderConfig>;
 
@@ -70,7 +72,7 @@ const showFooterBlockTitles = false;
 /**
  * Toggle footer blocks?
  */
-const canToggleFooterBlocks = false;
+const canToggleFooterBlocks = true;
 
 /**
  * Show info block in footer?
@@ -105,6 +107,9 @@ const customiseFlip = true;
 
 // Inline / block
 const customiseInline = false;
+
+// Footer to use
+const footer = 'Full';
 
 /**
  * Default values for color, width and height
@@ -161,5 +166,6 @@ export const finderDefaultConfig: FinderConfig = {
 	customiseInline,
 	showButtons,
 	footerButtons,
-	showCode
+	showCode,
+	footer
 }

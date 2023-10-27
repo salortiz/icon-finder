@@ -196,7 +196,7 @@
 				{#if showCode && icon}
 					<CodeBlock {icon} {customisations} />
 				{/if}
-				{#if showButtons || icon}
+				{#if showButtons || hasIcons}
 					<ButtonsContainer {footerButtons} {icons} {route} />
 				{/if}
 			</div>
