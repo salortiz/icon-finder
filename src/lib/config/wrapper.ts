@@ -11,6 +11,9 @@ export interface ComponentsConfig {
 	// Active code tab
 	codeTab?: string;
 
+	// MultiSelect active
+	multi?: boolean;
+
 	// Can select multiple icons
 	multiSelect: boolean;
 
@@ -35,11 +38,14 @@ export const defaultComponentsConfig: Required<ComponentsConfig> = {
 	// Active code tab
 	codeTab: '',
 
+	// Multi active
+	multi: false,
+
 	// Can select multiple icons
-	multiSelect: false,
+	multiSelect: true,
 
 	// Toggle footer blocks
 	propsVisible: true,
-	infoVisible: false,
+	infoVisible: true,
 	codeVisible: false,
 };

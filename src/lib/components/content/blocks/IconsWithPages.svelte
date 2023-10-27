@@ -89,10 +89,15 @@
 
 	// Select multiple icons
 	const canSelectMultiple = componentsConfig.multiSelect;
-	let isSelecting: boolean = false;
+	let isSelecting = componentsConfig.multi;
 
 	function toggleSelection() {
-		isSelecting = !isSelecting;
+		if(canSelectMultiple) {
+			isSelecting = componentsConfig.multi = !componentsConfig.multi;
+			registry.callback({
+				type: 'config'
+			})
+		}
 	}
 </script>
 
