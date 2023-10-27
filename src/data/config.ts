@@ -38,6 +38,9 @@ export interface IconFinderConfig {
 
 	// Components
 	components?: Record<string, unknown>;
+
+	// Finder
+	finder?: Record<string, unknown>
 }
 
 export type FullIconFinderConfig = Required<IconFinderConfig>;
@@ -83,6 +86,9 @@ const defaultConfig: FullIconFinderConfig = {
 
 	// Components
 	components: {},
+
+	// Finder
+	finder: {},
 };
 
 /**
