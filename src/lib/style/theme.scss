@@ -1,0 +1,15 @@
+@import 'palette';
+@import 'rotation';
+@import 'mixins';
+@function dcolor($dark, $base) {
+	@if $dark {
+		@return 1000 - $base;
+	}
+	@return $base;
+}
+$iif-dark: false;
+@import './style';
+.dark {
+	$iif-dark: true;
+	@import './style';
+};
