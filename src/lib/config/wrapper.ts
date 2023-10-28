@@ -39,13 +39,13 @@ export const defaultComponentsConfig: Required<ComponentsConfig> = {
 	codeTab: '',
 
 	// Multi active
-	multi: false,
+	multi: true,
 
-	// Can select multiple icons
-	multiSelect: true,
+	// Can toggle select multiple icons
+	multiSelect: false,
 
 	// Toggle footer blocks
 	propsVisible: true,
-	infoVisible: true,
+	infoVisible: false,
 	codeVisible: false,
 };
