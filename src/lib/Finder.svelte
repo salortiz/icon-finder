@@ -8,7 +8,7 @@
 	export type FinderCtrl = Wrapper;
 </script>
 <script lang="ts">
-	import "./style/style.scss";
+	import "./style/theme.scss";
 
 	export let finder: FinderCtrl | null = null;
 	// With defaults if caller don't set any
