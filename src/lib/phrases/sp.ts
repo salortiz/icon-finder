@@ -51,7 +51,7 @@ export const phrases: UITranslation = {
 			char: '\nIcon font character: {char}',
 			length: '', //'\nContent: {length} bytes',
 		},
-		more: 'Busca mas iconos', // '3 ...',
+		more: 'Busca más iconos', // '3 ...',
 		moreAsNumber: false, // True if text above refers to third page, false if text above shows "Find more icons" or similar text
 	},
 	pagination: {
