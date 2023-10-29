@@ -49,7 +49,7 @@
 	<Icon
 		icon={iconName}
 		class={iconsClass}
-		onLoad={loadCallback} />{#if !loaded}
+		on:load={loadCallback} />{#if !loaded}
 		<slot />
 	{/if}
 {:else}

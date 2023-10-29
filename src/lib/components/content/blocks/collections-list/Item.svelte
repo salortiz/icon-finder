@@ -100,6 +100,8 @@
 	}
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <li class={className} on:click={handleBlockClick}>
 	<div class="iif-collection-text">
 		<a href={link} on:click|preventDefault={() => onClick(prefix)}>
