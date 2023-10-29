@@ -1,14 +1,14 @@
 import 'mocha';
 import { expect } from 'chai';
-import type { ExtendedCollectionsList } from '../../lib/converters/collections';
+import type { ExtendedCollectionsList } from '../../lib/converters/collections.js';
 import {
 	dataToCollections,
 	collectionsPrefixes,
 	filterCollections,
-} from '../../lib/converters/collections';
-import type { CollectionInfo } from '../../lib/converters/info';
-import { getFixture } from '../get_fixture';
-import { defaultCollectionInfo } from '../collection_info';
+} from '../../lib/converters/collections.js';
+import type { CollectionInfo } from '../../lib/converters/info.js';
+import { getFixture } from '../get_fixture.js';
+import { defaultCollectionInfo } from '../collection_info.js';
 
 describe('Testing converting collections list', () => {
 	it('Simple info', () => {

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import 'mocha';
 import { expect } from 'chai';
-import type { RGBColorValue, HSLColorValue } from '../../lib/misc/colors';
-import { stringToColor, colorToString } from '../../lib/misc/colors';
+import type { RGBColorValue, HSLColorValue } from '../../lib/misc/colors.js';
+import { stringToColor, colorToString } from '../../lib/misc/colors.js';
 
 describe('Testing color conversions', () => {
 	it('Keyword to object', () => {

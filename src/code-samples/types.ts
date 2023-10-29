@@ -1,4 +1,4 @@
-import type { Icon } from '../misc/icon';
+import type { Icon } from '../misc/icon.js';
 
 /**
  * Code sample modes

@@ -3,14 +3,14 @@
 import 'mocha';
 import { expect } from 'chai';
 import SVGFramework from '@iconify/iconify';
-import { setIconify } from '../../lib/iconify';
-import { Registry } from '../../lib/registry';
+import { setIconify } from '../../lib/iconify/index.js';
+import { Registry } from '../../lib/registry/index.js';
 import {
 	API as FakeAPI,
 	collectionQueryParams,
 	collectionsQueryParams,
-} from '../fake_api';
-import { convertCustomSets } from '../../lib/data/custom-sets';
+} from '../fake_api.js';
+import { convertCustomSets } from '../../lib/data/custom-sets.js';
 
 // Set SVG Framework
 setIconify(SVGFramework);
@@ -34,7 +34,7 @@ describe('Testing home route with custom icon sets', () => {
 	 */
 	function setupRegistry(provider = ''): Registry {
 		const registry = new Registry(namespace + nsCounter++);
-		const api = new FakeAPI(registry);
+		const api = new FakeAPI();
 		registry.api = api;
 		api.loadFixture(
 			provider,

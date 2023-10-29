@@ -1,9 +1,9 @@
-import type { BaseBlock } from './types';
-import type { Icon } from '../misc/icon';
-import type { SearchBlock } from './search';
-import type { FiltersBlock } from './filters';
-import { enableFilters } from './filters';
-import type { CollectionViewBlocksIconFilters } from '../views/collection';
+import type { BaseBlock } from './types.js';
+import type { Icon } from '../misc/icon.js';
+import type { SearchBlock } from './search.js';
+import type { FiltersBlock } from './filters.js';
+import { enableFilters } from './filters.js';
+import type { CollectionViewBlocksIconFilters } from '../views/collection.js';
 
 /**
  * Interface for block

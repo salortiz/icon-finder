@@ -1,5 +1,5 @@
 import type { QueryDoneCallback, QueryModuleResponse } from '@iconify/api-redundancy';
-import { BaseAPI } from './base';
+import { BaseAPI } from './base.js';
 
 /**
  * Fetch function

@@ -1,7 +1,7 @@
 import 'mocha';
 import { expect } from 'chai';
-import type { EventCallbackData } from '../../lib/events';
-import { Events } from '../../lib/events';
+import type { EventCallbackData } from '../../lib/events.js';
+import { Events } from '../../lib/events.js';
 
 describe('Testing events', () => {
 	it('Basic event', (done) => {

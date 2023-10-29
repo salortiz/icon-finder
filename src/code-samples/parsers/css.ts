@@ -1,6 +1,6 @@
-import type { IconCustomisations } from '../../misc/customisations';
-import type { Icon } from '../../misc/icon';
-import type { CodeSampleAPIConfig } from '../types';
+import type { IconCustomisations } from '../../misc/customisations.js';
+import type { Icon } from '../../misc/icon.js';
+import type { CodeSampleAPIConfig } from '../types.js';
 import {
 	addAttr,
 	degrees,
@@ -9,8 +9,8 @@ import {
 	mergeAttr,
 	type ParserAttr,
 	toString,
-} from './common';
-import type { CodeOutput, CodeParser, IconifyCodeDocs } from './types';
+} from './common.js';
+import type { CodeOutput, CodeParser, IconifyCodeDocs } from './types.js';
 
 // Documentation links
 const docs: IconifyCodeDocs = {

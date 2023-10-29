@@ -1,10 +1,10 @@
-import type { IconCustomisations } from '../../misc/customisations';
-import type { Icon } from '../../misc/icon';
+import type { IconCustomisations } from '../../misc/customisations.js';
+import type { Icon } from '../../misc/icon.js';
 import type {
 	CodeSampleAPIConfig,
 	CodeSampleKey,
 	CodeSampleUsage,
-} from '../types';
+} from '../types.js';
 
 /**
  * Documentation

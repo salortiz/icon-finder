@@ -1,4 +1,4 @@
-import type { BaseBlock } from './types';
+import type { BaseBlock } from './types.js';
 
 export interface PaginationBlock extends BaseBlock {
 	readonly type: 'pagination';

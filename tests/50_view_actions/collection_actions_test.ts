@@ -1,17 +1,17 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import 'mocha';
 import { expect } from 'chai';
-import { Registry } from '../../lib/registry';
+import { Registry } from '../../lib/registry/index.js';
 import {
 	API as FakeAPI,
 	collectionQueryParams,
 	collectionsQueryParams,
 	searchQueryParams,
-} from '../fake_api';
-import type { RouterEvent } from '../../lib/route/router';
-import type { CollectionViewBlocks } from '../../lib/views/collection';
-import { isPaginationEmpty } from '../../lib/blocks/pagination';
-import type { FiltersBlock } from '../../lib/blocks/filters';
+} from '../fake_api.js';
+import type { RouterEvent } from '../../lib/route/router.js';
+import type { CollectionViewBlocks } from '../../lib/views/collection.js';
+import { isPaginationEmpty } from '../../lib/blocks/pagination.js';
+import type { FiltersBlock } from '../../lib/blocks/filters.js';
 
 describe('Testing collection actions', () => {
 	const namespace = __filename;
@@ -26,7 +26,7 @@ describe('Testing collection actions', () => {
 		const config = registry.config;
 		config.ui!.itemsPerPage = 48;
 
-		const api = new FakeAPI(registry);
+		const api = new FakeAPI();
 		registry.api = api;
 		api.loadFixture(
 			'',

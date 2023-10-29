@@ -1,13 +1,13 @@
 import 'mocha';
 import { expect } from 'chai';
-import type { CodeSampleAPIConfig } from '../../lib/code-samples/types';
-import { emptyCustomisations } from '../../lib/misc/customisations';
+import type { CodeSampleAPIConfig } from '../../lib/code-samples/types.js';
+import { emptyCustomisations } from '../../lib/misc/customisations.js';
 import type {
 	CodeOutput,
 	IconifyCodeDocs,
-} from '../../lib/code-samples/parsers/types';
-import { cssParser } from '../../lib/code-samples/parsers/css';
-import { docsBase } from '../../lib/code-samples/parsers/common';
+} from '../../lib/code-samples/parsers/types.js';
+import { cssParser } from '../../lib/code-samples/parsers/css.js';
+import { docsBase } from '../../lib/code-samples/parsers/common.js';
 
 const config: CodeSampleAPIConfig = {
 	// Show packages that use API

@@ -2,20 +2,20 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import 'mocha';
 import { expect } from 'chai';
-import type { CollectionViewBlocks } from '../../lib/views/collection';
-import { CollectionView } from '../../lib/views/collection';
-import { Registry } from '../../lib/registry';
-import type { FullCollectionRoute } from '../../lib/route/types/routes';
-import { objectToRoute } from '../../lib/route/convert';
-import type { PartialCollectionRouteParams } from '../../lib/route/types/params';
-import { API as FakeAPI } from '../fake_api';
-import type { EventCallback } from '../../lib/events';
-import type { IconFinderCustomSets } from '../../lib/data/custom-sets';
-import { convertCustomSets } from '../../lib/data/custom-sets';
+import type { CollectionViewBlocks } from '../../lib/views/collection.js';
+import { CollectionView } from '../../lib/views/collection.js';
+import { Registry } from '../../lib/registry/index.js';
+import type { FullCollectionRoute } from '../../lib/route/types/routes.js';
+import { objectToRoute } from '../../lib/route/convert.js';
+import type { PartialCollectionRouteParams } from '../../lib/route/types/params.js';
+import { API as FakeAPI } from '../fake_api.js';
+import type { EventCallback } from '../../lib/events.js';
+import type { IconFinderCustomSets } from '../../lib/data/custom-sets.js';
+import { convertCustomSets } from '../../lib/data/custom-sets.js';
 import type { IconifyJSON } from '@iconify/types';
-import type { CollectionInfoBlock } from '../../lib/blocks/collection-info';
-import type { IconsListBlock } from '../../lib/blocks/icons-list';
-import type { PaginationBlock } from '../../lib/blocks/pagination';
+import type { CollectionInfoBlock } from '../../lib/blocks/collection-info.js';
+import type { IconsListBlock } from '../../lib/blocks/icons-list.js';
+import type { PaginationBlock } from '../../lib/blocks/pagination.js';
 
 describe('Testing collection view with custom data', () => {
 	const namespace = __filename;

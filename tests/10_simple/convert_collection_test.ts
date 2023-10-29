@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import 'mocha';
 import { expect } from 'chai';
-import type { CollectionData } from '../../lib/converters/collection';
-import { dataToCollection } from '../../lib/converters/collection';
-import { stringToIcon } from '../../lib/misc/icon';
-import { getFixture } from '../get_fixture';
+import type { CollectionData } from '../../lib/converters/collection.js';
+import { dataToCollection } from '../../lib/converters/collection.js';
+import { stringToIcon } from '../../lib/misc/icon.js';
+import { getFixture } from '../get_fixture.js';
 
 describe('Testing converting collection information', () => {
 	it('Simple data', () => {

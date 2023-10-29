@@ -1,23 +1,23 @@
-import type { BaseViewBlocks } from './base';
-import { BaseView } from './base';
-import type { FiltersBlock } from '../blocks/filters';
+import type { BaseViewBlocks } from './base.js';
+import { BaseView } from './base.js';
+import type { FiltersBlock } from '../blocks/filters.js';
 import {
 	defaultFiltersBlock,
 	defaultFilter,
 	autoIndexFilters,
-} from '../blocks/filters';
-import type { FullSearchRoute } from '../route/types/routes';
-import type { SearchResults } from '../converters/search';
-import { dataToSearchResults } from '../converters/search';
-import { type IconsListBlock, defaultIconsListBlock } from '../blocks/icons-list';
-import type { PaginationBlock } from '../blocks/pagination';
-import { defaultPaginationBlock, maxPage } from '../blocks/pagination';
-import { getRegistry } from '../registry/storage';
-import type { View } from './types';
-import { cloneObject } from '../misc/objects';
-import { setCollectionInfo } from '../data/collections';
-import { searchCacheKey } from '../api/base';
-import type { IconFinderConvertedCache } from '../converters/cache';
+} from '../blocks/filters.js';
+import type { FullSearchRoute } from '../route/types/routes.js';
+import type { SearchResults } from '../converters/search.js';
+import { dataToSearchResults } from '../converters/search.js';
+import { type IconsListBlock, defaultIconsListBlock } from '../blocks/icons-list.js';
+import type { PaginationBlock } from '../blocks/pagination.js';
+import { defaultPaginationBlock, maxPage } from '../blocks/pagination.js';
+import { getRegistry } from '../registry/storage.js';
+import type { View } from './types.js';
+import { cloneObject } from '../misc/objects.js';
+import { setCollectionInfo } from '../data/collections.js';
+import { searchCacheKey } from '../api/base.js';
+import type { IconFinderConvertedCache } from '../converters/cache.js';
 
 /**
  * Blocks

@@ -1,10 +1,10 @@
-import type { FullIconFinderConfig } from '../data/config';
-import type { Events } from '../events';
-import type { API } from '../api/fetch';
-import type { Router } from '../route/router';
-import type { CollectionsInfoStorage } from '../data/collections';
-import type { Registry } from './';
-import type { ConvertedCustomSets } from '../data/custom-sets';
+import type { FullIconFinderConfig } from '../data/config.js';
+import type { Events } from '../events.js';
+import type { API } from '../api/fetch.js';
+import type { Router } from '../route/router.js';
+import type { CollectionsInfoStorage } from '../data/collections.js';
+import type { Registry } from './index.js';
+import type { ConvertedCustomSets } from '../data/custom-sets.js';
 
 /**
  * Shared data storage per namespace

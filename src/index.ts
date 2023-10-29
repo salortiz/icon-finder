@@ -1,54 +1,54 @@
-import type { IconFinderConfig } from './data/config';
-import { Registry as RegistryClass } from './registry';
-import { getRegistry } from './registry/storage';
-import type { PartialRoute } from './route/types/routes';
-import type { Router, RouterEvent } from './route/router';
-import type { CollectionInfo } from './converters/info';
-import type { EventCallback } from './events';
-import type { Icon } from './misc/icon';
-import type { CustomViewLoadCallback } from './views/custom';
-import type { IconFinderCustomSets } from './data/custom-sets';
-import { convertCustomSets } from './data/custom-sets';
-import { getCollectionInfo } from './data/collections';
+import type { IconFinderConfig } from './data/config.js';
+import { Registry as RegistryClass } from './registry/index.js';
+import { getRegistry } from './registry/storage.js';
+import type { PartialRoute } from './route/types/routes.js';
+import type { Router, RouterEvent } from './route/router.js';
+import type { CollectionInfo } from './converters/info.js';
+import type { EventCallback } from './events.js';
+import type { Icon } from './misc/icon.js';
+import type { CustomViewLoadCallback } from './views/custom.js';
+import type { IconFinderCustomSets } from './data/custom-sets.js';
+import { convertCustomSets } from './data/custom-sets.js';
+import { getCollectionInfo } from './data/collections.js';
 
 /**
  * Export data for various blocks
  */
-export { type BlockType, type Block, isBlockEmpty } from './blocks/types';
+export { type BlockType, type Block, isBlockEmpty } from './blocks/types.js';
 
-export type { CollectionInfoBlock } from './blocks/collection-info';
+export type { CollectionInfoBlock } from './blocks/collection-info.js';
 
-export type { CollectionsFilterBlock } from './blocks/collections-filter';
+export type { CollectionsFilterBlock } from './blocks/collections-filter.js';
 
 export {
 	type CollectionsListBlock,
 	getCollectionsBlockCategories,
 	getCollectionsBlockPrefixes,
 	iterateCollectionsBlock,
-} from './blocks/collections-list';
+} from './blocks/collections-list.js';
 
-export type { FiltersBlock, FiltersFilter } from './blocks/filters';
+export type { FiltersBlock, FiltersFilter } from './blocks/filters.js';
 
-export type { IconsListBlock } from './blocks/icons-list';
+export type { IconsListBlock } from './blocks/icons-list.js';
 
-export { type PaginationBlock, showPagination, maxPage } from './blocks/pagination';
+export { type PaginationBlock, showPagination, maxPage } from './blocks/pagination.js';
 
-export type { SearchBlock } from './blocks/search';
+export type { SearchBlock } from './blocks/search.js';
 
 /**
  * Export various types and functions that do not depend on core instance
  */
 // Iconify wrapper
-export { setIconify, type CoreIconifyFunctions } from './iconify';
+export { setIconify, type CoreIconifyFunctions } from './iconify/index.js';
 
 // Provider
-export type { APIProviderSource } from './data/providers';
+export type { APIProviderSource } from './data/providers.js';
 export {
 	addProvider,
 	getProvider,
 	convertProviderData,
 	listProviders,
-} from './data/providers';
+} from './data/providers.js';
 
 // From routes
 export type { PartialRoute };
@@ -68,8 +68,8 @@ export type {
 	PartialSearchRoute,
 	PartialCustomRoute,
 	PartialEmptyRoute,
-} from './route/types/routes';
-export { objectToRoute } from './route/convert';
+} from './route/types/routes.js';
+export { objectToRoute } from './route/convert.js';
 
 // From router
 export type { Router, RouterEvent };
@@ -78,10 +78,10 @@ export type { Router, RouterEvent };
 export type Registry = RegistryClass;
 
 // From collections info
-export type { CollectionsInfoStorage } from './data/collections';
+export type { CollectionsInfoStorage } from './data/collections.js';
 export type { CollectionInfo };
 export { getCollectionInfo };
-export { getCollectionTitle } from './data/collections';
+export { getCollectionTitle } from './data/collections.js';
 
 // From config
 export type { IconFinderConfig };
@@ -89,14 +89,14 @@ export {
 	customisedConfig,
 	mergeConfig,
 	setComponentsConfig,
-} from './data/config';
+} from './data/config.js';
 
 // From views
-export type { ViewBlocks } from './views/types';
-export type { CollectionsViewBlocks } from './views/collections';
-export type { CollectionViewBlocks } from './views/collection';
-export type { SearchViewBlocks } from './views/search';
-export type { IconsList, CustomViewBlocks } from './views/custom';
+export type { ViewBlocks } from './views/types.js';
+export type { CollectionsViewBlocks } from './views/collections.js';
+export type { CollectionViewBlocks } from './views/collection.js';
+export type { SearchViewBlocks } from './views/search.js';
+export type { IconsList, CustomViewBlocks } from './views/custom.js';
 
 // From icons
 export type { Icon };
@@ -105,13 +105,13 @@ export {
 	validateIcon,
 	compareIcons,
 	stringToIcon,
-} from './misc/icon';
+} from './misc/icon.js';
 
 // Custom sets
 export type { IconFinderCustomSets };
 
 // Objects
-export { compareObjects, cloneObject } from './misc/objects';
+export { compareObjects, cloneObject } from './misc/objects.js';
 
 /**
  * Icon Finder core parameters

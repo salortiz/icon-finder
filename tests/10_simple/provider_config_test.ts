@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import 'mocha';
 import { expect } from 'chai';
-import type { APIProviderRawData } from '../../lib/data/providers';
-import { convertProviderData } from '../../lib/data/providers';
+import type { APIProviderRawData } from '../../lib/data/providers.js';
+import { convertProviderData } from '../../lib/data/providers.js';
 
 describe('Testing converting provider data', () => {
 	it('Invalid items', () => {

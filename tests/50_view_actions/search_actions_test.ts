@@ -2,16 +2,16 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import 'mocha';
 import { expect } from 'chai';
-import { Registry } from '../../lib/registry';
-import type { PartialRoute } from '../../lib/route/types/routes';
+import { Registry } from '../../lib/registry/index.js';
+import type { PartialRoute } from '../../lib/route/types/routes.js';
 import {
 	API as FakeAPI,
 	collectionsQueryParams,
 	searchQueryParams,
-} from '../fake_api';
-import type { RouterEvent } from '../../lib/route/router';
-import type { SearchViewBlocks } from '../../lib/views/search';
-import type { PaginationBlock } from '../../lib/blocks/pagination';
+} from '../fake_api.js';
+import type { RouterEvent } from '../../lib/route/router.js';
+import type { SearchViewBlocks } from '../../lib/views/search.js';
+import type { PaginationBlock } from '../../lib/blocks/pagination.js';
 
 describe('Testing search actions', () => {
 	const namespace = __filename;
@@ -22,7 +22,7 @@ describe('Testing search actions', () => {
 	 */
 	function setupRegistry(): Registry {
 		const registry = new Registry(namespace + nsCounter++);
-		const api = new FakeAPI(registry);
+		const api = new FakeAPI();
 		registry.api = api;
 		api.loadFixture(
 			'',

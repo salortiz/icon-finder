@@ -1,9 +1,9 @@
 import {
 	emptyCustomisations,
 	type IconCustomisations,
-} from '../../misc/customisations';
-import type { Icon } from '../../misc/icon';
-import type { CodeSampleAPIConfig } from '../types';
+} from '../../misc/customisations.js';
+import type { Icon } from '../../misc/icon.js';
+import type { CodeSampleAPIConfig } from '../types.js';
 
 type ICK = keyof IconCustomisations;
 /**

@@ -1,6 +1,6 @@
 import 'mocha';
 import { expect } from 'chai';
-import { routeToObject } from '../../lib/route/convert';
+import { routeToObject } from '../../lib/route/convert.js';
 
 describe('Testing route', () => {
 	it('routeToObject(collections)', () => {

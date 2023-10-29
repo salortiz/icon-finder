@@ -1,12 +1,12 @@
 import 'mocha';
 import { expect } from 'chai';
-import type { SearchResults } from '../../lib/converters/search';
-import { dataToSearchResults } from '../../lib/converters/search';
-import type { CollectionInfo } from '../../lib/converters/info';
-import { dataToCollectionInfo } from '../../lib/converters/info';
-import type { Icon } from '../../lib/misc/icon';
-import { stringToIcon } from '../../lib/misc/icon';
-import { getFixture } from '../get_fixture';
+import type { SearchResults } from '../../lib/converters/search.js';
+import { dataToSearchResults } from '../../lib/converters/search.js';
+import type { CollectionInfo } from '../../lib/converters/info.js';
+import { dataToCollectionInfo } from '../../lib/converters/info.js';
+import type { Icon } from '../../lib/misc/icon.js';
+import { stringToIcon } from '../../lib/misc/icon.js';
+import { getFixture } from '../get_fixture.js';
 
 describe('Testing converting search results', () => {
 	it('Simple data', () => {

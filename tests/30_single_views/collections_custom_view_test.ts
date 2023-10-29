@@ -2,15 +2,15 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import 'mocha';
 import { expect } from 'chai';
-import { Registry } from '../../lib/registry';
-import type { FullCollectionsRoute } from '../../lib/route/types/routes';
-import { objectToRoute } from '../../lib/route/convert';
-import { API as FakeAPI, collectionsQueryParams } from '../fake_api';
-import type { EventCallback } from '../../lib/events';
-import type { IconFinderCustomSets } from '../../lib/data/custom-sets';
-import { convertCustomSets } from '../../lib/data/custom-sets';
-import type { CollectionsViewBlocks } from '../../lib/views/collections';
-import { CollectionsView } from '../../lib/views/collections';
+import { Registry } from '../../lib/registry/index.js';
+import type { FullCollectionsRoute } from '../../lib/route/types/routes.js';
+import { objectToRoute } from '../../lib/route/convert.js';
+import { API as FakeAPI, collectionsQueryParams } from '../fake_api.js';
+import type { EventCallback } from '../../lib/events.js';
+import type { IconFinderCustomSets } from '../../lib/data/custom-sets.js';
+import { convertCustomSets } from '../../lib/data/custom-sets.js';
+import type { CollectionsViewBlocks } from '../../lib/views/collections.js';
+import { CollectionsView } from '../../lib/views/collections.js';
 
 describe('Testing collections view with custom data', () => {
 	const namespace = __filename;

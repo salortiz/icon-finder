@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import 'mocha';
 import { expect } from 'chai';
-import type { CollectionsViewBlocks } from '../../lib/views/collections';
-import { CollectionsView } from '../../lib/views/collections';
-import { getCollectionsBlockPrefixes } from '../../lib/blocks/collections-list';
-import { Registry } from '../../lib/registry';
-import type { FullCollectionsRoute } from '../../lib/route/types/routes';
-import { objectToRoute } from '../../lib/route/convert';
-import type { FullCollectionsRouteParams } from '../../lib/route/types/params';
-import type { EventCallback } from '../../lib/events';
-import { API as FakeAPI, collectionsQueryParams } from '../fake_api';
-import { collectionsCacheKey } from '../../lib/api/base';
+import type { CollectionsViewBlocks } from '../../lib/views/collections.js';
+import { CollectionsView } from '../../lib/views/collections.js';
+import { getCollectionsBlockPrefixes } from '../../lib/blocks/collections-list.js';
+import { Registry } from '../../lib/registry/index.js';
+import type { FullCollectionsRoute } from '../../lib/route/types/routes.js';
+import { objectToRoute } from '../../lib/route/convert.js';
+import type { FullCollectionsRouteParams } from '../../lib/route/types/params.js';
+import type { EventCallback } from '../../lib/events.js';
+import { API as FakeAPI, collectionsQueryParams } from '../fake_api.js';
+import { collectionsCacheKey } from '../../lib/api/base.js';
 
 describe('Testing collections list view', () => {
 	const namespace = __filename;
@@ -21,7 +21,7 @@ describe('Testing collections list view', () => {
 	 */
 	function setupRegistry(provider = '', cache = false): Registry {
 		const registry = new Registry(namespace + nsCounter++);
-		const api = new FakeAPI(registry);
+		const api = new FakeAPI();
 		registry.api = api;
 		api.loadFixture(
 			provider,
@@ -238,7 +238,7 @@ describe('Testing collections list view', () => {
 
 	it('Invalid provider', (done) => {
 		const registry = new Registry(namespace + nsCounter++);
-		const api = new FakeAPI(registry);
+		const api = new FakeAPI();
 		registry.api = api;
 
 		let isSync = true;
@@ -274,7 +274,7 @@ describe('Testing collections list view', () => {
 		// Load fixture only for 'test' provider
 		const registry = new Registry(namespace + nsCounter++);
 		registry.config.router.syncRender = true;
-		const api = new FakeAPI(registry);
+		const api = new FakeAPI();
 		registry.api = api;
 
 		let isSync = true;
@@ -309,7 +309,7 @@ describe('Testing collections list view', () => {
 	it('Provider mismatch', (done) => {
 		// Load fixture only for 'test' provider
 		const registry = new Registry(namespace + nsCounter++);
-		const api = new FakeAPI(registry);
+		const api = new FakeAPI();
 		registry.api = api;
 		api.setFakeData(
 			'',
@@ -356,7 +356,7 @@ describe('Testing collections list view', () => {
 		// Load fixture only for 'test' provider
 		const registry = new Registry(namespace + nsCounter++);
 		registry.config.router.syncRender = true;
-		const api = new FakeAPI(registry);
+		const api = new FakeAPI();
 		registry.api = api;
 		api.setFakeData(
 			'',
@@ -407,7 +407,7 @@ describe('Testing collections list view', () => {
 		// Load fixture only for 'test' provider
 		const registry = new Registry(namespace + nsCounter++);
 		registry.config.router.syncRender = true;
-		const api = new FakeAPI(registry);
+		const api = new FakeAPI();
 		registry.api = api;
 		// api.setFakeData('', '/collections', collectionsQueryParams(), null);
 		api.storeCache('', 'collections', null);

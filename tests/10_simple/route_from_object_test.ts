@@ -5,8 +5,8 @@ import type {
 	FullCollectionRoute,
 	FullSearchRoute,
 	FullCustomRoute,
-} from '../../lib/route/types/routes';
-import { objectToRoute } from '../../lib/route/convert';
+} from '../../lib/route/types/routes.js';
+import { objectToRoute } from '../../lib/route/convert.js';
 
 describe('Testing route', () => {
 	it('objectToRoute(collections)', () => {

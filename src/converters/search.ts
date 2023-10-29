@@ -1,7 +1,7 @@
-import type { Icon } from '../misc/icon';
-import { stringToIcon } from '../misc/icon';
-import type { CollectionInfo } from './info';
-import { dataToCollectionInfo } from './info';
+import type { Icon } from '../misc/icon.js';
+import { stringToIcon } from '../misc/icon.js';
+import type { CollectionInfo } from './info.js';
+import { dataToCollectionInfo } from './info.js';
 
 /**
  * Search results

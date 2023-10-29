@@ -1,7 +1,7 @@
-import type { IconCustomisations } from '../../misc/customisations';
-import { type Icon, iconToString } from '../../misc/icon';
-import type { CodeSampleAPIConfig } from '../types';
-import { iconifyIconVersion } from '../versions';
+import type { IconCustomisations } from '../../misc/customisations.js';
+import { type Icon, iconToString } from '../../misc/icon.js';
+import type { CodeSampleAPIConfig } from '../types.js';
+import { iconifyIconVersion } from '../versions.js';
 import {
 	addAttr,
 	degrees,
@@ -12,8 +12,8 @@ import {
 	mergeAttributes,
 	type ParserAttr,
 	toString,
-} from './common';
-import type { CodeOutput, CodeParser, IconifyCodeDocs } from './types';
+} from './common.js';
+import type { CodeOutput, CodeParser, IconifyCodeDocs } from './types.js';
 
 
 // Documentation links

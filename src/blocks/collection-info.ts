@@ -1,5 +1,5 @@
-import type { BaseBlock } from './types';
-import type { CollectionInfo } from '../converters/info';
+import type { BaseBlock } from './types.js';
+import type { CollectionInfo } from '../converters/info.js';
 
 /**
  * Interface for block

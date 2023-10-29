@@ -1,10 +1,10 @@
 import type { IconifyJSON, IconifyInfo } from '@iconify/types';
 import type { IconifyJSON as OldIconifyJSON } from '@iconify/iconify';
-import { Iconify } from '../iconify';
-import type { CollectionData } from '../converters/collection';
-import { rawDataToCollection } from '../converters/collection';
-import type { ExtendedCollectionsList } from '../converters/collections';
-import { dataToCollections } from '../converters/collections';
+import { Iconify } from '../iconify/index.js';
+import type { CollectionData } from '../converters/collection.js';
+import { rawDataToCollection } from '../converters/collection.js';
+import type { ExtendedCollectionsList } from '../converters/collections.js';
+import { dataToCollections } from '../converters/collections.js';
 
 /**
  * TypeScript guard

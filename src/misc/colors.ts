@@ -1,5 +1,5 @@
-import type { ColorKeywordValue } from './color-keywords';
-import { baseColorKeywords, extendedColorKeywords } from './color-keywords';
+import type { ColorKeywordValue } from './color-keywords.js';
+import { baseColorKeywords, extendedColorKeywords } from './color-keywords.js';
 
 export interface RGBColorValue {
 	// RGB: 0-255

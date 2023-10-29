@@ -1,15 +1,15 @@
 import 'mocha';
 import { expect } from 'chai';
-import type { CodeSampleAPIConfig } from '../../lib/code-samples/types';
-import { emptyCustomisations } from '../../lib/misc/customisations';
+import type { CodeSampleAPIConfig } from '../../lib/code-samples/types.js';
+import { emptyCustomisations } from '../../lib/misc/customisations.js';
 import type {
 	CodeOutput,
 	IconifyCodeDocs,
-} from '../../lib/code-samples/parsers/types';
-import { svgFrameworkParser } from '../../lib/code-samples/parsers/svg-framework';
-import { docsBase } from '../../lib/code-samples/parsers/common';
-import { iconifyVersion } from '../../lib/code-samples/versions';
-import { Iconify } from '../../lib/iconify';
+} from '../../lib/code-samples/parsers/types.js';
+import { svgFrameworkParser } from '../../lib/code-samples/parsers/svg-framework.js';
+import { docsBase } from '../../lib/code-samples/parsers/common.js';
+import { iconifyVersion } from '../../lib/code-samples/versions.js';
+import { Iconify } from '../../lib/iconify/index.js';
 
 const config: CodeSampleAPIConfig = {
 	// Show packages that use API

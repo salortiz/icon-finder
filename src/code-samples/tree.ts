@@ -1,12 +1,12 @@
-import { capitalizeCodeSampleTitle, codeSampleTitles } from './phrases';
+import { capitalizeCodeSampleTitle, codeSampleTitles } from './phrases.js';
 import type {
 	CodeSampleMode,
 	CodeSampleTab,
 	CodeSampleKey,
 	CodeSampleType,
 	CodeSampleAPIConfig,
-} from './types';
-import { Iconify } from '../iconify';
+} from './types.js';
+import { Iconify } from '../iconify/index.js';
 
 /**
  * Code tree

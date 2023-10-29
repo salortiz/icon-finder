@@ -6,21 +6,21 @@ import type {
 	CustomViewBlocks,
 	CustomViewLoadCallback,
 	IconsList,
-} from '../../lib/views/custom';
-import { CustomView } from '../../lib/views/custom';
-import { Registry } from '../../lib/registry';
-import type { FullCustomRoute } from '../../lib/route/types/routes';
-import { objectToRoute, objectToRouteParams } from '../../lib/route/convert';
+} from '../../lib/views/custom.js';
+import { CustomView } from '../../lib/views/custom.js';
+import { Registry } from '../../lib/registry/index.js';
+import type { FullCustomRoute } from '../../lib/route/types/routes.js';
+import { objectToRoute, objectToRouteParams } from '../../lib/route/convert.js';
 import type {
 	FullCustomRouteParams,
 	PartialCustomRouteParams,
-} from '../../lib/route/types/params';
-import type { EventCallback } from '../../lib/events';
-import type { Icon } from '../../lib/misc/icon';
-import { stringToIcon, iconToString } from '../../lib/misc/icon';
-import type { IconsListBlock } from '../../lib/blocks/icons-list';
-import { isSearchBlockEmpty } from '../../lib/blocks/search';
-import type { PaginationBlock } from '../../lib/blocks/pagination';
+} from '../../lib/route/types/params.js';
+import type { EventCallback } from '../../lib/events.js';
+import type { Icon } from '../../lib/misc/icon.js';
+import { stringToIcon, iconToString } from '../../lib/misc/icon.js';
+import type { IconsListBlock } from '../../lib/blocks/icons-list.js';
+import { isSearchBlockEmpty } from '../../lib/blocks/search.js';
+import type { PaginationBlock } from '../../lib/blocks/pagination.js';
 
 describe('Testing custom view', () => {
 	const namespace = __filename;

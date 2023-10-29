@@ -1,17 +1,17 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import 'mocha';
 import { expect } from 'chai';
-import type { CollectionsListBlock } from '../../lib/blocks/collections-list';
+import type { CollectionsListBlock } from '../../lib/blocks/collections-list.js';
 import {
 	defaultCollectionsListBlock,
 	isCollectionsBlockEmpty,
 	getCollectionsBlockCategories,
 	getCollectionsBlockPrefixes,
 	filterCollectionsBlock,
-} from '../../lib/blocks/collections-list';
-import { autoIndexCollections } from '../../lib/converters/collections';
-import type { CollectionInfo } from '../../lib/converters/info';
-import { defaultCollectionInfo } from '../collection_info';
+} from '../../lib/blocks/collections-list.js';
+import { autoIndexCollections } from '../../lib/converters/collections.js';
+import type { CollectionInfo } from '../../lib/converters/info.js';
+import { defaultCollectionInfo } from '../collection_info.js';
 
 describe('Testing collections list block', () => {
 	it('Block tests', () => {

@@ -2,17 +2,17 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import 'mocha';
 import { expect } from 'chai';
-import { Registry } from '../../lib/registry';
-import { API as FakeAPI, collectionsQueryParams } from '../fake_api';
-import type { RouterEvent } from '../../lib/route/router';
+import { Registry } from '../../lib/registry/index.js';
+import { API as FakeAPI, collectionsQueryParams } from '../fake_api.js';
+import type { RouterEvent } from '../../lib/route/router.js';
 import type {
 	CustomViewLoadCallback,
 	CustomViewBlocks,
-} from '../../lib/views/custom';
-import type { IconsListBlock } from '../../lib/blocks/icons-list';
-import { isIconsListBlockEmpty } from '../../lib/blocks/icons-list';
-import type { Icon } from '../../lib/misc/icon';
-import { iconToString } from '../../lib/misc/icon';
+} from '../../lib/views/custom.js';
+import type { IconsListBlock } from '../../lib/blocks/icons-list.js';
+import { isIconsListBlockEmpty } from '../../lib/blocks/icons-list.js';
+import type { Icon } from '../../lib/misc/icon.js';
+import { iconToString } from '../../lib/misc/icon.js';
 
 describe('Testing custom actions', () => {
 	const namespace = __filename;

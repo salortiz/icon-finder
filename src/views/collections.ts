@@ -1,37 +1,37 @@
-import type { BaseViewBlocks } from './base';
-import { BaseView } from './base';
-import type { CollectionsFilterBlock } from '../blocks/collections-filter';
-import { defaultCollectionsFilterBlock } from '../blocks/collections-filter';
-import type { CollectionsListBlock } from '../blocks/collections-list';
+import type { BaseViewBlocks } from './base.js';
+import { BaseView } from './base.js';
+import type { CollectionsFilterBlock } from '../blocks/collections-filter.js';
+import { defaultCollectionsFilterBlock } from '../blocks/collections-filter.js';
+import type { CollectionsListBlock } from '../blocks/collections-list.js';
 import {
 	defaultCollectionsListBlock,
 	getCollectionsBlockCategories,
 	disableInactiveCategories,
 	applyCollectionsFilter,
 	iterateCollectionsBlock,
-} from '../blocks/collections-list';
-import type { FiltersBlock } from '../blocks/filters';
+} from '../blocks/collections-list.js';
+import type { FiltersBlock } from '../blocks/filters.js';
 import {
 	defaultFiltersBlock,
 	defaultFilter,
 	autoIndexFilters,
-} from '../blocks/filters';
-import type { FullCollectionsRoute } from '../route/types/routes';
+} from '../blocks/filters.js';
+import type { FullCollectionsRoute } from '../route/types/routes.js';
 import type {
 	ExtendedCollectionsList,
 	CollectionsListRawData,
-} from '../converters/collections';
+} from '../converters/collections.js';
 import {
 	dataToCollections,
 	autoIndexCollections,
-} from '../converters/collections';
-import { getRegistry } from '../registry/storage';
-import type { View } from './types';
-import { setCollectionInfo } from '../data/collections';
-import type { IconFinderCustomSetsMerge } from '../data/custom-sets';
-import { mergeCollections } from '../data/custom-sets';
-import { collectionsCacheKey } from '../api/base';
-import type { IconFinderConvertedCache } from '../converters/cache';
+} from '../converters/collections.js';
+import { getRegistry } from '../registry/storage.js';
+import type { View } from './types.js';
+import { setCollectionInfo } from '../data/collections.js';
+import type { IconFinderCustomSetsMerge } from '../data/custom-sets.js';
+import { mergeCollections } from '../data/custom-sets.js';
+import { collectionsCacheKey } from '../api/base.js';
+import type { IconFinderConvertedCache } from '../converters/cache.js';
 
 /**
  * Blocks

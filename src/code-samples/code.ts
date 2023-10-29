@@ -1,19 +1,19 @@
-import type { IconCustomisations } from '../misc/customisations';
-import type { Icon } from '../misc/icon';
-import type { CodeSampleAPIConfig, CodeSampleMode } from './types';
+import type { IconCustomisations } from '../misc/customisations.js';
+import type { Icon } from '../misc/icon.js';
+import type { CodeSampleAPIConfig, CodeSampleMode } from './types.js';
 import type {
 	CodeOutput,
 	CodeParser,
 	ComponentCodeOutput,
-} from './parsers/types';
-import { cssParser } from './parsers/css';
-import { emberParser } from './parsers/ember';
-import { reactOfflineParser, reactParser } from './parsers/react';
-import { svelteOfflineParser, svelteParser } from './parsers/svelte';
-import { svgParser } from './parsers/svg';
-import { svgFrameworkParser } from './parsers/svg-framework';
-import { webComponentParser } from './parsers/iconify-icon';
-import { vueOfflineParser, vueParser } from './parsers/vue';
+} from './parsers/types.js';
+import { cssParser } from './parsers/css.js';
+import { emberParser } from './parsers/ember.js';
+import { reactOfflineParser, reactParser } from './parsers/react.js';
+import { svelteOfflineParser, svelteParser } from './parsers/svelte.js';
+import { svgParser } from './parsers/svg.js';
+import { svgFrameworkParser } from './parsers/svg-framework.js';
+import { webComponentParser } from './parsers/iconify-icon.js';
+import { vueOfflineParser, vueParser } from './parsers/vue.js';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function assertNever(v: never) {

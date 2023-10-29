@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import 'mocha';
 import { expect } from 'chai';
-import type { FiltersBlock } from '../../lib/blocks/filters';
+import type { FiltersBlock } from '../../lib/blocks/filters.js';
 import {
 	defaultFiltersBlock,
 	isFiltersBlockEmpty,
 	enableFilters,
 	autoIndexFilters,
-} from '../../lib/blocks/filters';
+} from '../../lib/blocks/filters.js';
 
 describe('Testing filters block', () => {
 	it('Block tests', () => {

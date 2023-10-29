@@ -2,22 +2,22 @@
 import 'mocha';
 import { expect } from 'chai';
 import SVGFramework from '@iconify/iconify';
-import { setIconify } from '../../lib/iconify';
-import { Registry } from '../../lib/registry';
+import { setIconify } from '../../lib/iconify/index.js';
+import { Registry } from '../../lib/registry/index.js';
 import {
 	API as FakeAPI,
 	collectionQueryParams,
 	collectionsQueryParams,
 	searchQueryParams,
-} from '../fake_api';
-import type { RouterEvent } from '../../lib/route/router';
-import type { CollectionsViewBlocks } from '../../lib/views/collections';
-import { getCollectionsBlockPrefixes } from '../../lib/blocks/collections-list';
-import type { FiltersBlock } from '../../lib/blocks/filters';
-import type { CollectionViewBlocks } from '../../lib/views/collection';
-import { isBlockEmpty } from '../../lib/blocks/types';
-import { addProvider, convertProviderData } from '../../lib/data/providers';
-import { collectionsCacheKey, searchCacheKey } from '../../lib/api/base';
+} from '../fake_api.js';
+import type { RouterEvent } from '../../lib/route/router.js';
+import type { CollectionsViewBlocks } from '../../lib/views/collections.js';
+import { getCollectionsBlockPrefixes } from '../../lib/blocks/collections-list.js';
+import type { FiltersBlock } from '../../lib/blocks/filters.js';
+import type { CollectionViewBlocks } from '../../lib/views/collection.js';
+import { isBlockEmpty } from '../../lib/blocks/types.js';
+import { addProvider, convertProviderData } from '../../lib/data/providers.js';
+import { collectionsCacheKey, searchCacheKey } from '../../lib/api/base.js';
 
 // Set SVG Framework
 setIconify(SVGFramework);

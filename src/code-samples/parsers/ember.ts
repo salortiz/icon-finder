@@ -1,15 +1,15 @@
-import type { IconCustomisations } from '../../misc/customisations';
-import { type Icon, iconToString } from '../../misc/icon';
-import type { CodeSampleAPIConfig } from '../types';
-import { getComponentInstall } from '../versions';
+import type { IconCustomisations } from '../../misc/customisations.js';
+import { type Icon, iconToString } from '../../misc/icon.js';
+import type { CodeSampleAPIConfig } from '../types.js';
+import { getComponentInstall } from '../versions.js';
 import {
 	addEmberAttr,
 	docsBase,
 	getCustomisationsList,
 	mergeAttributes,
 	type ParserAttr,
-} from './common';
-import type { CodeOutput, CodeParser, IconifyCodeDocs } from './types';
+} from './common.js';
+import type { CodeOutput, CodeParser, IconifyCodeDocs } from './types.js';
 
 // Documentation links
 const docs: IconifyCodeDocs = {

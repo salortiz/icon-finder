@@ -2,11 +2,11 @@ import type {
 	APIProviderRawDataLinks,
 	APIProviderRawDataNPM,
 	APIProviderRawData,
-} from '@iconify/types/provider';
+} from '@iconify/types/provider.js';
 import type { IconifyAPIConfig, PartialIconifyAPIConfig } from '@iconify/iconify';
 import { initRedundancy } from '@iconify/api-redundancy';
 import type { Redundancy } from '@iconify/api-redundancy';
-import { Iconify } from '../iconify';
+import { Iconify } from '../iconify/index.js';
 import { matchIconName } from '@iconify/utils/lib/icon/name';
 
 // Export imported types

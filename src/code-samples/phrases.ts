@@ -1,5 +1,5 @@
-import { capitalize } from '../misc/capitalize';
-import type { CodeSampleKey, CodeSampleTitles } from './types';
+import { capitalize } from '../misc/capitalize.js';
+import type { CodeSampleKey, CodeSampleTitles } from './types.js';
 
 /**
  * Code sample tab and mode titles

@@ -1,17 +1,17 @@
-import type { CollectionInfoBlock } from './collection-info';
-import { isCollectionInfoBlockEmpty } from './collection-info';
-import type { CollectionsFilterBlock } from './collections-filter';
-import { isCollectionsFilterBlockEmpty } from './collections-filter';
-import type { CollectionsListBlock } from './collections-list';
-import { isCollectionsBlockEmpty } from './collections-list';
-import type { FiltersBlock } from './filters';
-import { isFiltersBlockEmpty } from './filters';
-import type { IconsListBlock } from './icons-list';
-import { isIconsListBlockEmpty } from './icons-list';
-import type { PaginationBlock } from './pagination';
-import { isPaginationEmpty } from './pagination';
-import type { SearchBlock } from './search';
-import { isSearchBlockEmpty } from './search';
+import type { CollectionInfoBlock } from './collection-info.js';
+import { isCollectionInfoBlockEmpty } from './collection-info.js';
+import type { CollectionsFilterBlock } from './collections-filter.js';
+import { isCollectionsFilterBlockEmpty } from './collections-filter.js';
+import type { CollectionsListBlock } from './collections-list.js';
+import { isCollectionsBlockEmpty } from './collections-list.js';
+import type { FiltersBlock } from './filters.js';
+import { isFiltersBlockEmpty } from './filters.js';
+import type { IconsListBlock } from './icons-list.js';
+import { isIconsListBlockEmpty } from './icons-list.js';
+import type { PaginationBlock } from './pagination.js';
+import { isPaginationEmpty } from './pagination.js';
+import type { SearchBlock } from './search.js';
+import { isSearchBlockEmpty } from './search.js';
 
 /**
  * Block types

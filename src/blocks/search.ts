@@ -1,4 +1,4 @@
-import type { BaseBlock } from './types';
+import type { BaseBlock } from './types.js';
 
 /**
  * Interface for block

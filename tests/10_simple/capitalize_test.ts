@@ -1,6 +1,6 @@
 import 'mocha';
 import { expect } from 'chai';
-import { capitalize } from '../../lib/misc/capitalize';
+import { capitalize } from '../../lib/misc/capitalize.js';
 
 describe('Testing capitalize', () => {
 	it('Testing capitalize()', () => {

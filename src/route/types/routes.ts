@@ -9,7 +9,7 @@ import type {
 	FullSearchRouteParams,
 	FullCustomRouteParams,
 	FullEmptyRouteParams,
-} from './params';
+} from './params.js';
 
 /**
  * Route types

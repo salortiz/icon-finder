@@ -1,22 +1,22 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import 'mocha';
 import { expect } from 'chai';
-import type { CollectionsFilterBlock } from '../../lib/blocks/collections-filter';
+import type { CollectionsFilterBlock } from '../../lib/blocks/collections-filter.js';
 import {
 	defaultCollectionsFilterBlock,
 	isCollectionsFilterBlockEmpty,
-} from '../../lib/blocks/collections-filter';
-import type { FiltersBlock } from '../../lib/blocks/filters';
-import { defaultFiltersBlock, defaultFilter } from '../../lib/blocks/filters';
-import type { CollectionsListBlock } from '../../lib/blocks/collections-list';
+} from '../../lib/blocks/collections-filter.js';
+import type { FiltersBlock } from '../../lib/blocks/filters.js';
+import { defaultFiltersBlock, defaultFilter } from '../../lib/blocks/filters.js';
+import type { CollectionsListBlock } from '../../lib/blocks/collections-list.js';
 import {
 	defaultCollectionsListBlock,
 	getCollectionsBlockCategories,
 	getCollectionsBlockPrefixes,
 	applyCollectionsFilter,
-} from '../../lib/blocks/collections-list';
-import { dataToCollections } from '../../lib/converters/collections';
-import { getFixture } from '../get_fixture';
+} from '../../lib/blocks/collections-list.js';
+import { dataToCollections } from '../../lib/converters/collections.js';
+import { getFixture } from '../get_fixture.js';
 
 describe('Testing collections filters block', () => {
 	it('isCollectionsFilterBlockEmpty', () => {

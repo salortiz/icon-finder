@@ -1,6 +1,6 @@
 import 'mocha';
 import { expect } from 'chai';
-import { routeParamsToObject } from '../../lib/route/convert';
+import { routeParamsToObject } from '../../lib/route/convert.js';
 
 describe('Testing route parameters', () => {
 	it('routeParamsToObject(collections)', () => {

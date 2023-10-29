@@ -2,24 +2,24 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import 'mocha';
 import { expect } from 'chai';
-import type { CollectionViewBlocks } from '../../lib/views/collection';
-import { CollectionView } from '../../lib/views/collection';
-import { Registry } from '../../lib/registry';
-import type { FullCollectionRoute } from '../../lib/route/types/routes';
-import { objectToRoute, objectToRouteParams } from '../../lib/route/convert';
+import type { CollectionViewBlocks } from '../../lib/views/collection.js';
+import { CollectionView } from '../../lib/views/collection.js';
+import { Registry } from '../../lib/registry/index.js';
+import type { FullCollectionRoute } from '../../lib/route/types/routes.js';
+import { objectToRoute, objectToRouteParams } from '../../lib/route/convert.js';
 import type {
 	FullCollectionRouteParams,
 	PartialCollectionRouteParams,
-} from '../../lib/route/types/params';
-import { API as FakeAPI, collectionQueryParams } from '../fake_api';
-import type { EventCallback } from '../../lib/events';
-import type { FiltersBlock } from '../../lib/blocks/filters';
-import { isFiltersBlockEmpty } from '../../lib/blocks/filters';
-import type { Icon } from '../../lib/misc/icon';
-import type { IconsListBlock } from '../../lib/blocks/icons-list';
-import { isSearchBlockEmpty } from '../../lib/blocks/search';
-import type { PaginationBlock } from '../../lib/blocks/pagination';
-import { collectionCacheKey } from '../../lib/api/base';
+} from '../../lib/route/types/params.js';
+import { API as FakeAPI, collectionQueryParams } from '../fake_api.js';
+import type { EventCallback } from '../../lib/events.js';
+import type { FiltersBlock } from '../../lib/blocks/filters.js';
+import { isFiltersBlockEmpty } from '../../lib/blocks/filters.js';
+import type { Icon } from '../../lib/misc/icon.js';
+import type { IconsListBlock } from '../../lib/blocks/icons-list.js';
+import { isSearchBlockEmpty } from '../../lib/blocks/search.js';
+import type { PaginationBlock } from '../../lib/blocks/pagination.js';
+import { collectionCacheKey } from '../../lib/api/base.js';
 
 describe('Testing collection view', () => {
 	const namespace = __filename;

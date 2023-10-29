@@ -1,9 +1,9 @@
-import { Iconify } from '../../iconify';
-import type { IconCustomisations } from '../../misc/customisations';
-import { type Icon, iconToString } from '../../misc/icon';
-import { renderHTML } from '../html';
-import type { CodeSampleAPIConfig, CodeSampleMode } from '../types';
-import type { CodeOutput } from './types';
+import { Iconify } from '../../iconify/index.js';
+import type { IconCustomisations } from '../../misc/customisations.js';
+import { type Icon, iconToString } from '../../misc/icon.js';
+import { renderHTML } from '../html.js';
+import type { CodeSampleAPIConfig, CodeSampleMode } from '../types.js';
+import type { CodeOutput } from './types.js';
 
 /**
  * Code output for API component

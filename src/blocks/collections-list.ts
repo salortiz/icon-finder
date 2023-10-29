@@ -1,17 +1,17 @@
-import type { BaseBlock } from './types';
+import type { BaseBlock } from './types.js';
 import type {
 	ExtendedCollectionsList,
 	CollectionsListFilterCallback,
-} from '../converters/collections';
+} from '../converters/collections.js';
 import {
 	collectionsPrefixes,
 	filterCollections,
-} from '../converters/collections';
-import type { CollectionInfo } from '../converters/info';
-import type { FiltersBlock } from './filters';
-import { enableFilters } from './filters';
-import type { CollectionsFilterBlock } from './collections-filter';
-import { match } from '../misc/objects';
+} from '../converters/collections.js';
+import type { CollectionInfo } from '../converters/info.js';
+import type { FiltersBlock } from './filters.js';
+import { enableFilters } from './filters.js';
+import type { CollectionsFilterBlock } from './collections-filter.js';
+import { match } from '../misc/objects.js';
 
 /**
  * Block

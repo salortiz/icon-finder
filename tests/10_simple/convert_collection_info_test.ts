@@ -1,8 +1,8 @@
 import 'mocha';
 import { expect } from 'chai';
-import type { CollectionInfo } from '../../lib/converters/info';
-import { dataToCollectionInfo } from '../../lib/converters/info';
-import { getFixture } from '../get_fixture';
+import type { CollectionInfo } from '../../lib/converters/info.js';
+import { dataToCollectionInfo } from '../../lib/converters/info.js';
+import { getFixture } from '../get_fixture.js';
 
 describe('Testing converting collection information', () => {
 	it('Simple info', () => {

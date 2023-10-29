@@ -1,7 +1,7 @@
-import type { BaseViewBlocks } from './base';
-import { BaseView } from './base';
-import type { FullEmptyRoute } from '../route/types/routes';
-import type { View } from './types';
+import type { BaseViewBlocks } from './base.js';
+import { BaseView } from './base.js';
+import type { FullEmptyRoute } from '../route/types/routes.js';
+import type { View } from './types.js';
 
 /**
  * Blocks

@@ -1,8 +1,8 @@
 import 'mocha';
 import { expect } from 'chai';
-import { API, collectionsQueryParams } from '../fake_api';
-import { Registry } from '../../lib/registry';
-import type { CollectionInfo } from '../../lib/converters/info';
+import { API, collectionsQueryParams } from '../fake_api.js';
+import { Registry } from '../../lib/registry/index.js';
+import type { CollectionInfo } from '../../lib/converters/info.js';
 
 describe('Testing API', function () {
 	const namespace = __filename;

@@ -1,6 +1,6 @@
-import type { APIParams } from '../api/base';
-import { getRegistry } from '../registry/storage';
-import { getProvider } from '../data/providers';
+import type { APIParams } from '../api/base.js';
+import { getRegistry } from '../registry/storage.js';
+import { getProvider } from '../data/providers.js';
 
 /**
  * View error

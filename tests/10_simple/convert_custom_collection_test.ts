@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import 'mocha';
 import { expect } from 'chai';
-import type { CollectionData } from '../../lib/converters/collection';
-import { rawDataToCollection } from '../../lib/converters/collection';
+import type { CollectionData } from '../../lib/converters/collection.js';
+import { rawDataToCollection } from '../../lib/converters/collection.js';
 import type { IconifyJSON } from '@iconify/types';
-import type { Icon } from '../../lib/misc/icon';
+import type { Icon } from '../../lib/misc/icon.js';
 
 describe('Testing converting custom collection information', () => {
 	it('Invalid data', () => {

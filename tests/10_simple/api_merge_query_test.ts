@@ -1,6 +1,6 @@
 import 'mocha';
 import { expect } from 'chai';
-import { mergeQuery } from '../../lib/api/base';
+import { mergeQuery } from '../../lib/api/base.js';
 
 describe('Testing mergeQuery', () => {
 	it('mergeQuery()', () => {

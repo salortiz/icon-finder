@@ -1,7 +1,7 @@
-import type { IconCustomisations } from '../../misc/customisations';
-import { type Icon, iconToString } from '../../misc/icon';
-import type { CodeSampleAPIConfig } from '../types';
-import { componentPackages, getComponentInstall } from '../versions';
+import type { IconCustomisations } from '../../misc/customisations.js';
+import { type Icon, iconToString } from '../../misc/icon.js';
+import type { CodeSampleAPIConfig } from '../types.js';
+import { componentPackages, getComponentInstall } from '../versions.js';
 import {
 	addAttr,
 	addVueAttr,
@@ -11,8 +11,8 @@ import {
 	mergeAttributes,
 	npmIconImport,
 	type ParserAttr,
-} from './common';
-import type { CodeOutput, IconifyCodeDocs } from './types';
+} from './common.js';
+import type { CodeOutput, IconifyCodeDocs } from './types.js';
 
 // Documentation links
 const docs2: IconifyCodeDocs = {

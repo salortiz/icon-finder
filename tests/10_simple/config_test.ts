@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import 'mocha';
 import { expect } from 'chai';
-import type { IconFinderConfig } from '../../lib/data/config';
-import { customisedConfig, createConfig } from '../../lib/data/config';
+import type { IconFinderConfig } from '../../lib/data/config.js';
+import { customisedConfig, createConfig } from '../../lib/data/config.js';
 
 describe('Testing config', () => {
 	it('Config test', () => {

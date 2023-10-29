@@ -1,6 +1,6 @@
-import type { ExtendedCollectionsList } from './collections';
-import type { CollectionData } from './collection';
-import type { SearchResults } from './search';
+import type { ExtendedCollectionsList } from './collections.js';
+import type { CollectionData } from './collection.js';
+import type { SearchResults } from './search.js';
 
 /**
  * Cache stored in 'core-cache' as Record<string, IconFinderConvertedCache>, where key is API provider.

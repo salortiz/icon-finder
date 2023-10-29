@@ -1,11 +1,11 @@
 import 'mocha';
 import { expect } from 'chai';
-import { renderHTML } from '../../lib/code-samples/html';
-import { fullIcon, type FullIconifyIcon } from '@iconify/utils/lib/icon';
+import { renderHTML } from '../../lib/code-samples/html.js';
+import { fullIcon, type FullIconifyIcon } from '@iconify/utils/lib/icon.js';
 import {
 	mergeCustomisations,
 	emptyCustomisations,
-} from '../../lib/misc/customisations';
+} from '../../lib/misc/customisations.js';
 
 describe('Testing Iconify replacements for code samples', () => {
 	it('renderHTML()', () => {

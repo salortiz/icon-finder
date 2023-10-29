@@ -4,8 +4,8 @@ import type {
 	QueryModuleCallback,
 	QueryModuleResponse,
 } from '@iconify/api-redundancy';
-import type { Registry } from '../registry';
-import { getProvider } from '../data/providers';
+import type { Registry } from '../registry/index.js';
+import { getProvider } from '../data/providers.js';
 
 export interface APIParams {
 	[index: string]: unknown;

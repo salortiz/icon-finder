@@ -5,9 +5,9 @@ import type {
 	FullCollectionRouteParams,
 	FullSearchRouteParams,
 	FullCustomRouteParams,
-} from '../../lib/route/types/params';
-import type { RouteType } from '../../lib/route/types/routes';
-import { objectToRouteParams } from '../../lib/route/convert';
+} from '../../lib/route/types/params.js';
+import type { RouteType } from '../../lib/route/types/routes.js';
+import { objectToRouteParams } from '../../lib/route/convert.js';
 
 describe('Testing route parameters', () => {
 	it('objectToRouteParams(collections)', () => {

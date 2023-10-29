@@ -1,20 +1,20 @@
-import type { FullIconFinderConfig, IconFinderConfig } from '../data/config';
-import { createConfig } from '../data/config';
-import { Events } from '../events';
-import { API } from '../api/fetch';
-import type { FullRoute, PartialRoute } from '../route/types/routes';
-import { Router } from '../route/router';
-import type { CollectionsInfoStorage } from '../data/collections';
-import type { RegistryDataStorage } from './storage';
+import type { FullIconFinderConfig, IconFinderConfig } from '../data/config.js';
+import { createConfig } from '../data/config.js';
+import { Events } from '../events.js';
+import { API } from '../api/fetch.js';
+import type { FullRoute, PartialRoute } from '../route/types/routes.js';
+import { Router } from '../route/router.js';
+import type { CollectionsInfoStorage } from '../data/collections.js';
+import type { RegistryDataStorage } from './storage.js';
 import {
 	uniqueId,
 	addRegistry,
 	getSharedData,
 	saveRegistry,
 	destroyRegistry,
-} from './storage';
-import type { ConvertedCustomSets } from '../data/custom-sets';
-import { emptyConvertedSet } from '../data/custom-sets';
+} from './storage.js';
+import type { ConvertedCustomSets } from '../data/custom-sets.js';
+import { emptyConvertedSet } from '../data/custom-sets.js';
 
 /**
  * Registry parameters

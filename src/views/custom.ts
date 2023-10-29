@@ -1,17 +1,17 @@
-import type { BaseViewBlocks } from './base';
-import { BaseView } from './base';
-import type { FullCustomRoute } from '../route/types/routes';
-import type { IconsListBlock } from '../blocks/icons-list';
-import { defaultIconsListBlock, applyIconFilters } from '../blocks/icons-list';
-import type { PaginationBlock } from '../blocks/pagination';
-import { defaultPaginationBlock, maxPage } from '../blocks/pagination';
-import { getRegistry } from '../registry/storage';
-import type { Icon } from '../misc/icon';
-import { validateIcon, stringToIcon } from '../misc/icon';
-import type { SearchBlock } from '../blocks/search';
-import { defaultSearchBlock } from '../blocks/search';
-import type { View } from './types';
-import { cloneObject } from '../misc/objects';
+import type { BaseViewBlocks } from './base.js';
+import { BaseView } from './base.js';
+import type { FullCustomRoute } from '../route/types/routes.js';
+import type { IconsListBlock } from '../blocks/icons-list.js';
+import { defaultIconsListBlock, applyIconFilters } from '../blocks/icons-list.js';
+import type { PaginationBlock } from '../blocks/pagination.js';
+import { defaultPaginationBlock, maxPage } from '../blocks/pagination.js';
+import { getRegistry } from '../registry/storage.js';
+import type { Icon } from '../misc/icon.js';
+import { validateIcon, stringToIcon } from '../misc/icon.js';
+import type { SearchBlock } from '../blocks/search.js';
+import { defaultSearchBlock } from '../blocks/search.js';
+import type { View } from './types.js';
+import { cloneObject } from '../misc/objects.js';
 
 /**
  * Blocks

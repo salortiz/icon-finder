@@ -2,25 +2,25 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import 'mocha';
 import { expect } from 'chai';
-import type { SearchViewBlocks } from '../../lib/views/search';
-import { SearchView } from '../../lib/views/search';
-import { Registry } from '../../lib/registry';
-import type { FullSearchRoute } from '../../lib/route/types/routes';
-import { objectToRoute, objectToRouteParams } from '../../lib/route/convert';
+import type { SearchViewBlocks } from '../../lib/views/search.js';
+import { SearchView } from '../../lib/views/search.js';
+import { Registry } from '../../lib/registry/index.js';
+import type { FullSearchRoute } from '../../lib/route/types/routes.js';
+import { objectToRoute, objectToRouteParams } from '../../lib/route/convert.js';
 import type {
 	FullSearchRouteParams,
 	PartialSearchRouteParams,
-} from '../../lib/route/types/params';
-import { API as FakeAPI, searchQueryParams } from '../fake_api';
-import type { EventCallback } from '../../lib/events';
-import type { FiltersBlock } from '../../lib/blocks/filters';
-import { isFiltersBlockEmpty } from '../../lib/blocks/filters';
-import type { Icon } from '../../lib/misc/icon';
-import type { IconsListBlock } from '../../lib/blocks/icons-list';
-import { isIconsListBlockEmpty } from '../../lib/blocks/icons-list';
-import type { PaginationBlock } from '../../lib/blocks/pagination';
-import { isPaginationEmpty } from '../../lib/blocks/pagination';
-import { searchCacheKey } from '../../lib/api/base';
+} from '../../lib/route/types/params.js';
+import { API as FakeAPI, searchQueryParams } from '../fake_api.js';
+import type { EventCallback } from '../../lib/events.js';
+import type { FiltersBlock } from '../../lib/blocks/filters.js';
+import { isFiltersBlockEmpty } from '../../lib/blocks/filters.js';
+import type { Icon } from '../../lib/misc/icon.js';
+import type { IconsListBlock } from '../../lib/blocks/icons-list.js';
+import { isIconsListBlockEmpty } from '../../lib/blocks/icons-list.js';
+import type { PaginationBlock } from '../../lib/blocks/pagination.js';
+import { isPaginationEmpty } from '../../lib/blocks/pagination.js';
+import { searchCacheKey } from '../../lib/api/base.js';
 
 describe('Testing search view', () => {
 	const namespace = __filename;
@@ -47,7 +47,7 @@ describe('Testing search view', () => {
 		config.ui!.itemsPerPage = 32;
 
 		// Change API to fake API and load fixture
-		const api = new FakeAPI(registry);
+		const api = new FakeAPI();
 		registry.api = api;
 		const limit = short ? 64 : 999;
 		api.loadFixture(
@@ -204,7 +204,7 @@ describe('Testing search view', () => {
 		config.ui!.itemsPerPage = 32;
 
 		// Change API to fake API and load fixture
-		const api = new FakeAPI(registry);
+		const api = new FakeAPI();
 		registry.api = api;
 		api.setFakeData(
 			'',

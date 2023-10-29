@@ -1,4 +1,4 @@
-import type { CollectionInfo } from '../converters/info';
+import type { CollectionInfo } from '../converters/info.js';
 
 /**
  * Collection info storage for prefix

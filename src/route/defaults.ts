@@ -9,7 +9,7 @@ import type {
 	PartialCustomRouteParams,
 	FullEmptyRouteParams,
 	PartialEmptyRouteParams,
-} from './types/params';
+} from './types/params.js';
 
 /**
  * Default values for route parameters

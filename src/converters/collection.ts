@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import type { IconifyJSON, IconifyChars } from '@iconify/types';
-import type { Icon } from '../misc/icon';
-import type { CollectionInfo } from './info';
-import { dataToCollectionInfo } from './info';
+import type { Icon } from '../misc/icon.js';
+import type { CollectionInfo } from './info.js';
+import { dataToCollectionInfo } from './info.js';
 
 /**
  * Collection

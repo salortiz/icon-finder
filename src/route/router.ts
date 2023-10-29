@@ -1,15 +1,15 @@
-import { getRegistry } from '../registry/storage';
-import type { View, ViewBlocks } from '../views/types';
-import type { FullRoute, PartialRoute } from './types/routes';
-import { objectToRoute, routeToObject } from './convert';
-import { CollectionsView } from '../views/collections';
-import { CollectionView } from '../views/collection';
-import { SearchView } from '../views/search';
-import type { IconsList } from '../views/custom';
-import { CustomView } from '../views/custom';
-import { EmptyView } from '../views/empty';
-import { getProvider } from '../data/providers';
-import type { FullCollectionsRouteParams } from './types/params';
+import { getRegistry } from '../registry/storage.js';
+import type { View, ViewBlocks } from '../views/types.js';
+import type { FullRoute, PartialRoute } from './types/routes.js';
+import { objectToRoute, routeToObject } from './convert.js';
+import { CollectionsView } from '../views/collections.js';
+import { CollectionView } from '../views/collection.js';
+import { SearchView } from '../views/search.js';
+import type { IconsList } from '../views/custom.js';
+import { CustomView } from '../views/custom.js';
+import { EmptyView } from '../views/empty.js';
+import { getProvider } from '../data/providers.js';
+import type { FullCollectionsRouteParams } from './types/params.js';
 
 /**
  * TypeScript guard

@@ -9,8 +9,8 @@ import {
 	customRouteMinimum,
 	emptyRouteDefaults,
 	emptyRouteMinimum,
-} from './defaults';
-import type { RouteType, FullRoute, PartialRoute } from './types/routes';
+} from './defaults.js';
+import type { RouteType, FullRoute, PartialRoute } from './types/routes.js';
 
 /**
  * TypeScript guard

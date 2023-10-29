@@ -1,13 +1,13 @@
 import 'mocha';
 import { expect } from 'chai';
-import type { PaginationBlock } from '../../lib/blocks/pagination';
+import type { PaginationBlock } from '../../lib/blocks/pagination.js';
 import {
 	defaultPaginationBlock,
 	isPaginationEmpty,
 	showPagination,
 	maxPage,
 	getPageForIndex,
-} from '../../lib/blocks/pagination';
+} from '../../lib/blocks/pagination.js';
 
 interface TestRange {
 	min: number; // minimum number, inclusive

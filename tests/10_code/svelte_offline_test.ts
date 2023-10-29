@@ -1,17 +1,17 @@
 import 'mocha';
 import { expect } from 'chai';
-import type { CodeSampleAPIConfig } from '../../lib/code-samples/types';
-import { emptyCustomisations } from '../../lib/misc/customisations';
+import type { CodeSampleAPIConfig } from '../../lib/code-samples/types.js';
+import { emptyCustomisations } from '../../lib/misc/customisations.js';
 import type {
 	CodeOutput,
 	IconifyCodeDocs,
-} from '../../lib/code-samples/parsers/types';
-import { svelteOfflineParser } from '../../lib/code-samples/parsers/svelte';
-import { docsBase } from '../../lib/code-samples/parsers/common';
+} from '../../lib/code-samples/parsers/types.js';
+import { svelteOfflineParser } from '../../lib/code-samples/parsers/svelte.js';
+import { docsBase } from '../../lib/code-samples/parsers/common.js';
 import {
 	componentPackages,
 	getComponentInstall,
-} from '../../lib/code-samples/versions';
+} from '../../lib/code-samples/versions.js';
 
 const config: CodeSampleAPIConfig = {
 	// Show packages that use API
