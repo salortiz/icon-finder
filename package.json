@@ -12,7 +12,8 @@
         "preview": "vite preview",
         "package": "svelte-package",
         "check": "svelte-check --tsconfig ./tsconfig.json",
-        "build:style": "node build/style"
+        "build:style": "node build/style",
+        "dist": "cd ..; npm pack ./${npm_package_name} 2>${npm_package_name}-${npm_package_version}.manifest"
     },
     "bugs": "https://github.com/iconify/icon-finder/issues",
     "homepage": "https://github.com/iconify/icon-finder",
@@ -21,8 +22,6 @@
         "svelte": "^4.0.0"
     },
     "devDependencies": {
-        "@iconify/search-core": "^1.2.1",
-        "@iconify/svelte": "^3.1.4",
         "@iconify/types": "^2.0.0",
         "@iconify/utils": "^2.1.11",
         "@sveltejs/adapter-auto": "^2.1.0",
@@ -41,10 +40,19 @@
         "typescript": "^5.0.2",
         "vite": "^4.4.5"
     },
+    "dependencies": {
+        "@iconify/search-core": "../iconify-search-core-1.3.0.tgz",
+        "@iconify/svelte": "^3.1.4"
+    },
+    "files": [ "dist" ],
+    "svelte": "./dist/index.js",
+    "types" : "./dist/index.d.ts",
     "exports": {
-        ".": {
-              "types": "./dist/Finder.d.ts",
-              "svelte": "./dist/Finder.svelte"
-        }
+      ".": {
+        "svelte": "./dist/index.js",
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./package.json": "./package.json"
     }
 }
