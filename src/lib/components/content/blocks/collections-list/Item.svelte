@@ -3,13 +3,13 @@
 	import Icon from '@iconify/svelte';
 	import { getProvider } from '@iconify/search-core';
 	import type { CollectionInfo } from '@iconify/search-core/lib/converters/info';
-	import type { WrappedRegistry } from '../../../../wrapper/registry';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
 	import {
 		maxIndex,
 		showCollectionAuthorLink,
 		collectionClickable,
-	} from '../../../../config/theme';
-	import { phrases } from '../../../../config/phrases';
+	} from '$lib/config/theme.js';
+	import { phrases } from '$lib/config/phrases.js';
 	import Height from './Height.svelte';
 
 	const baseClass = 'iif-collection';

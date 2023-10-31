@@ -2,8 +2,8 @@
 	import IconComponent, { getIcon } from '@iconify/svelte';
 	import type { Icon } from '@iconify/search-core';
 	import type { IconifyIcon } from '@iconify/types';
-	import { phrases } from '../../../../config/phrases';
-	import type { IconsListFilter } from '../../../types';
+	import { phrases } from '$lib/config/phrases.js';
+	import type { IconsListFilter } from '../../../types.js';
 	import UIIcon from '../../../ui/UIIcon.svelte';
 	import Filter from '../../../ui/Filter.svelte';
 

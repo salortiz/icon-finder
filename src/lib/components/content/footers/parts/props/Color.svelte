@@ -7,9 +7,9 @@
 		stringToColor,
 		colorToString,
 	} from '@iconify/search-core/lib/misc/colors';
-	import { phrases } from '../../../../../config/phrases';
-	import { defaultColor } from '../../../../../config/components';
-	import Input from '../../../../ui/Input.svelte';
+	import { phrases } from '$lib/config/phrases.js';
+	import { defaultColor } from '$lib/config/components.js';
+	import Input from '$lib/components/ui/Input.svelte';
 	import OptionsBlock from '../OptionsBlock.svelte';
 
 	// Selected icons

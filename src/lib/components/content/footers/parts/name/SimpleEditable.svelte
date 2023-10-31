@@ -3,9 +3,9 @@
 	import IconComponent, { iconExists, loadIcons } from '@iconify/svelte';
 	import type { FullRoute, Icon } from '@iconify/search-core';
 	import { iconToString } from '@iconify/search-core';
-	import type { WrappedRegistry } from '../../../../../wrapper/registry';
-	import { phrases } from '../../../../../config/phrases';
-	import Input from '../../../../ui/Input.svelte';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
+	import { phrases } from '$lib/config/phrases.js';
+	import Input from '$lib/components/ui/Input.svelte';
 
 	// Selected icon
 	export let icon: Icon;

@@ -2,14 +2,14 @@
 	import { getContext } from 'svelte';
 	import type { Icon, FullRoute } from '@iconify/search-core';
 	import { iconToString } from '@iconify/search-core';
-	import type { WrappedRegistry } from '../../../../wrapper/registry';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
 	import type {
 		FooterButton,
 		FooterButtonCallbackParams,
-	} from '../../../../footer/types';
-	import { phrases } from '../../../../config/phrases';
-	import type { FinderConfig } from '../../../../config/components';
-	import UIIcon from '../../../ui/UIIcon.svelte';
+	} from '$lib/footer/types.js';
+	import { phrases } from '$lib/config/phrases.js';
+	import type { FinderConfig } from '$lib/config/components.js';
+	import UIIcon from '$lib/components/ui/UIIcon.svelte';
 
 	// The buttons
 	export let footerButtons: FinderConfig['footerButtons'];

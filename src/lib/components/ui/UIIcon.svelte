@@ -5,7 +5,7 @@
 <script lang="ts">
 	import Icon, { loadIcons } from '@iconify/svelte';
 	import { onMount } from 'svelte';
-	import { icons, iconsClass } from '../../config/theme';
+	import { icons, iconsClass } from '$lib/config/theme.js';
 
 	// Icon to render
 	export let icon: string;

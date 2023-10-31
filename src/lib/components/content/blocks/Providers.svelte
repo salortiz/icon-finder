@@ -1,17 +1,17 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
 	import { getProvider } from '@iconify/search-core';
-	import type { WrappedRegistry } from '../../../wrapper/registry';
-	import { phrases } from '../../../config/phrases';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
+	import { phrases } from '$lib/config/phrases.js';
 	import Tabs from '../../ui/Tabs.svelte';
 	import Block from '../Block.svelte';
 	import AddForm from '../../ui/AddForm.svelte';
-	import type { APIProviderError } from '../../../provider/add-provider';
 	import {
 		validateProvider,
 		retrieveProvider,
-	} from '../../../provider/add-provider';
-	import type { Tab } from '../../types';
+	} from '$lib/provider/add-provider.js';
+	import type { APIProviderError } from '$lib/provider/add-provider.js';
+	import type { Tab } from '../../types.js';
 
 	// Route
 	// export let route: FullRoute;

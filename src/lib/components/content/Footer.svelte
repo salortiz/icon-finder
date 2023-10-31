@@ -25,11 +25,10 @@
 	import { iconToString } from '@iconify/search-core';
 	import { Iconify } from '@iconify/search-core/lib/iconify';
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
-	import { mergeCustomisations } from '@iconify/search-core/lib/misc/customisations';
-	import type { SelectedIcons } from '../../wrapper/icons';
-	import { selectionToArray } from '../../wrapper/icons';
+	import type { SelectedIcons } from '$lib/wrapper/icons.js';
+	import { selectionToArray } from '$lib/wrapper/icons.js';
 	import type { FullRoute } from '@iconify/search-core';
-	import type { WrappedRegistry } from '../../wrapper/registry';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
 
 	/**
 	 * Global exports
@@ -46,7 +45,7 @@
 	const Footer = FooterMap[footer] as typeof FooterSimple; // Avoid signature warning for None.
 
 	// Change icon customisation value
-	function customise(prop: keyof IconCustomisations, value: IconifyIconSize | boolean) {
+	function customise(prop: keyof IconCustomisations, value: unknown) {
 		// Convert empty width/height to null
 		switch (prop) {
 			case 'width':
@@ -60,7 +59,7 @@
 		if (customisations[prop] !== void 0 && customisations[prop] !== value) {
 			// Change value then change object to force Svelte update components
 			const changed = {
-				[prop]: value,
+				[prop]: value as string | number | null | boolean,
 			};
 
 			// Send event: UICustomisationEvent

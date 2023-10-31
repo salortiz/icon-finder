@@ -3,8 +3,8 @@
 	import type { FullRoute, Icon } from '@iconify/search-core';
 	import { iconToString } from '@iconify/search-core';
 	import { Iconify } from '@iconify/search-core/lib/iconify';
-	import { getIconGrid } from '../../../../../footer/scale-icon';
-	import { shortenIconName } from '../../../../../footer/shorten-icon-name';
+	import { getIconGrid } from '$lib/footer/scale-icon.js';
+	import { shortenIconName } from '$lib/footer/shorten-icon-name.js';
 
 	// Selected icon
 	export let icon: Icon;

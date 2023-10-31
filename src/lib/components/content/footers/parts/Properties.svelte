@@ -1,14 +1,14 @@
 <script lang="ts">
 	import type { Icon } from '@iconify/search-core';
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
-	import { phrases } from '../../../../config/phrases';
+	import { phrases } from '$lib/config/phrases.js';
 	import FooterBlock from './FooterBlock.svelte';
 	import ColorBlock from './props/Color.svelte';
 	import SizeBlock from './props/Size.svelte';
 	import RotateBlock from './props/Rotate.svelte';
 	import FlipBlock from './props/Flip.svelte';
 	import InlineBlock from './props/Inline.svelte';
-	import type { FinderConfig } from '$lib/config/components';
+	import type { FinderConfig } from '$lib/config/components.js';
 
 	// Selected icons
 	export let icons: Icon[];

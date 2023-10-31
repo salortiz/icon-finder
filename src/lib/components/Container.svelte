@@ -2,8 +2,8 @@
 	import { setContext } from 'svelte';
 	import type { FullRoute, ViewBlocks } from '@iconify/search-core';
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
-	import type { SelectedIcons } from '../wrapper/icons';
-	import type { WrappedRegistry } from '../wrapper/registry';
+	import type { SelectedIcons } from '../wrapper/icons.js';
+	import type { WrappedRegistry } from '../wrapper/registry.js';
 	import Wrapper from './Wrapper.svelte';
 	import Content from './content/Content.svelte';
 	import Footer from './content/Footer.svelte';

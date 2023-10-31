@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { phrases } from '../../../../config/phrases';
+	import { phrases } from '$lib/config/phrases.js';
 
 	// Block type
 	export let type: string;

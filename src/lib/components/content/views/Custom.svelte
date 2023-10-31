@@ -3,7 +3,7 @@
 		CollectionViewBlocks,
 		FullCustomRoute,
 	} from '@iconify/search-core';
-	import type { SelectedIcons } from '../../../wrapper/icons';
+	import type { SelectedIcons } from '$lib/wrapper/icons.js';
 	import IconsWithPages from '../blocks/IconsWithPages.svelte';
 	import SearchBlock from '../blocks/Search.svelte';
 

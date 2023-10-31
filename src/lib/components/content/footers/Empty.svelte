@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Icon, FullRoute } from '@iconify/search-core';
-	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
-	import type { WrappedRegistry } from '../../../wrapper/registry';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
 	import { getContext } from 'svelte';
 	import Block from '../Block.svelte';
 	import ButtonsContainer from './parts/Buttons.svelte';

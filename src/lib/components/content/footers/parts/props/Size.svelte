@@ -8,7 +8,7 @@
 		defaultWidth,
 		defaultHeight,
 		type FinderConfig
-	} from '../../../../../config/components';
+	} from '$lib/config/components.js';
 	import OptionsBlock from '../OptionsBlock.svelte';
 	import SizeInput from './SizeInput.svelte';
 

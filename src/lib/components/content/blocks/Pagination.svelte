@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import type { WrappedRegistry } from '../../../wrapper/registry';
-	import { phrases } from '../../../config/phrases';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
+	import { phrases } from '$lib/config/phrases.js';
 	import type { PaginationBlock } from '@iconify/search-core';
 	import { showPagination } from '@iconify/search-core';
 	import UIIcon from '../../ui/UIIcon.svelte';

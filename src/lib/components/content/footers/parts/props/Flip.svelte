@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
-	import { phrases } from '../../../../../config/phrases';
+	import { phrases } from '$lib/config/phrases.js';
 	import OptionsBlock from '../OptionsBlock.svelte';
-	import Button from '../../../../ui/OptionButton.svelte';
+	import Button from '$lib/components/ui/OptionButton.svelte';
 
 	// Icon customisations
 	export let customisations: IconCustomisations;

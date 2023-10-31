@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { phrases } from '../../../../../config/phrases';
-	import UIIcon from '../../../../ui/UIIcon.svelte';
+	import { phrases } from '$lib/config/phrases.js';
+	import UIIcon from '$lib/components/ui/UIIcon.svelte';
 
 	// Code sample to show
 	export let content: string;

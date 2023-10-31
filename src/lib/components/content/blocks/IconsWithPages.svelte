@@ -6,9 +6,9 @@
 		FullRoute,
 		ViewBlocks,
 	} from '@iconify/search-core';
-	import type { SelectedIcons } from '../../../wrapper/icons';
-	import type { WrappedRegistry } from '../../../wrapper/registry';
-	import { phrases } from '../../../config/phrases';
+	import type { SelectedIcons } from '$lib/wrapper/icons.js';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
+	import { phrases } from '$lib/config/phrases.js';
 	import ContentError from '../../ui/ContentError.svelte';
 	import Block from '../Block.svelte';
 	import IconsContainer from './icons/Container.svelte';

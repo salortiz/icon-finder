@@ -5,9 +5,9 @@
 	import type { Icon, FullRoute } from '@iconify/search-core';
 	import { iconToString } from '@iconify/search-core';
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
-	import type { WrappedRegistry } from '../../../../wrapper/registry';
-	import { shortenIconName } from '../../../../footer/shorten-icon-name';
-	import { phrases } from '../../../../config/phrases';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
+	import { shortenIconName } from '$lib/footer/shorten-icon-name.js';
+	import { phrases } from '$lib/config/phrases.js'
 	import OptionsBlock from './OptionsBlock.svelte';
 	import UIIcon from '../../../ui/UIIcon.svelte';
 

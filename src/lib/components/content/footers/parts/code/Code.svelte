@@ -13,9 +13,9 @@
 		codeOutputComponentKeys,
 	} from '@iconify/search-core/lib/code-samples/code';
 	import { capitalizeCodeSampleTitle } from '@iconify/search-core/lib/code-samples/phrases';
-	import { phrases } from '../../../../../config/phrases';
-	import type { WrappedRegistry } from '../../../../../wrapper/registry';
-	import UIIcon from '../../../../ui/UIIcon.svelte';
+	import { phrases } from '$lib/config/phrases.js';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
+	import UIIcon from '$lib/components/ui/UIIcon.svelte';
 	import SampleInput from './Sample.svelte';
 
 	// Selected icon

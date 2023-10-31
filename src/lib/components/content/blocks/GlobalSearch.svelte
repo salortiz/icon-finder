@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
 	import type { FullRoute } from '@iconify/search-core';
-	import type { WrappedRegistry } from '../../../wrapper/registry';
-	import { phrases } from '../../../config/phrases';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
+	import { phrases } from '$lib/config/phrases.js';
 	import Input from '../../ui/Input.svelte';
 	import Block from '../Block.svelte';
 

@@ -12,9 +12,9 @@
 		CodeSamplesTreeChildItem,
 	} from '@iconify/search-core/lib/code-samples/tree';
 	import { getCodeSamplesTree } from '@iconify/search-core/lib/code-samples/tree';
-	import type { WrappedRegistry } from '../../../../../wrapper/registry';
-	import { phrases } from '../../../../../config/phrases';
-	import { codeConfig } from '../../../../../config/code';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
+	import { phrases } from '$lib/config/phrases.js';
+	import { codeConfig } from '$lib/config/code.js';
 	import FooterBlock from '../FooterBlock.svelte';
 	import FiltersComponent from '../../../blocks/Filters.svelte';
 	import CodeComponent from './Code.svelte';

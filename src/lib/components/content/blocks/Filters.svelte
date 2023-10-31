@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
 	import type { FiltersBlock } from '@iconify/search-core';
-	import type { WrappedRegistry } from '../../../wrapper/registry';
-	import { phrases } from '../../../config/phrases';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
+	import { phrases } from '$lib/config/phrases.js';
 	import Block from '../Block.svelte';
 	import Filter from '../../ui/Filter.svelte';
 

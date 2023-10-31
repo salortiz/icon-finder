@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import type { WrappedRegistry } from '../../../../wrapper/registry';
-	import UIIcon from '../../../ui/UIIcon.svelte';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
+	import UIIcon from '$lib/components/ui/UIIcon.svelte';
 
 	// Config key for expanding
 	export let name: string;

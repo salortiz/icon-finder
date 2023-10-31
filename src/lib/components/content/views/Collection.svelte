@@ -6,8 +6,8 @@
 		FiltersBlock,
 	} from '@iconify/search-core';
 	import { getProvider } from '@iconify/search-core';
-	import type { SelectedIcons } from '../../../wrapper/icons';
-	import type { FinderConfig } from '../../../config/components';
+	import type { SelectedIcons } from '$lib/wrapper/icons.js';
+	import type { FinderConfig } from '$lib/config/components.js';
 	import Filters from '../blocks/Filters.svelte';
 	import CollectionInfoBlock from '../blocks/CollectionInfo.svelte';
 	import IconsWithPages from '../blocks/IconsWithPages.svelte';

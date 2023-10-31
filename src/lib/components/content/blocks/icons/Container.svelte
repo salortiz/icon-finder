@@ -16,13 +16,13 @@
 		FiltersBlock,
 	} from '@iconify/search-core';
 	import { onDestroy } from 'svelte';
-	import type { SelectedIcons } from '../../../../wrapper/icons';
-	import { isIconSelected } from '../../../../wrapper/icons';
-	import type { WrappedRegistry } from '../../../../wrapper/registry';
-	import { phrases } from '../../../../config/phrases';
+	import type { SelectedIcons } from '$lib/wrapper/icons.js';
+	import { isIconSelected } from '$lib/wrapper/icons';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
+	import { phrases } from '$lib/config/phrases.js';
 	import IconList from './IconList.svelte';
 	import IconGrid from './IconGrid.svelte';
-	import type { IconsListFilter } from '../../../types';
+	import type { IconsListFilter } from '../../../types.js';
 
 	// Current route
 	export let route: FullRoute;

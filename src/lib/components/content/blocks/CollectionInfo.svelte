@@ -2,8 +2,8 @@
 	import { getContext } from 'svelte';
 	import type { CollectionInfoBlock } from '@iconify/search-core';
 	import type { CollectionInfo } from '@iconify/search-core/lib/converters/info';
-	import type { WrappedRegistry } from '../../../wrapper/registry';
-	import { phrases } from '../../../config/phrases';
+	import type { WrappedRegistry } from '$lib/wrapper/registry.js';
+	import { phrases } from '$lib/config/phrases.js';
 	import Block from '../Block.svelte';
 
 	// Block name

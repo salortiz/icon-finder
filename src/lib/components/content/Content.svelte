@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { FullRoute, ViewBlocks } from '@iconify/search-core';
 	import { listProviders } from '@iconify/search-core';
-	import type { SelectedIcons } from '../../wrapper/icons';
-	import type { FinderConfig } from '../../config/components';
-	import { getActiveProvider } from '../../provider/get-provider';
+	import type { SelectedIcons } from '$lib/wrapper/icons.js';
+	import type { FinderConfig } from '$lib/config/components.js';
+	import { getActiveProvider } from '$lib/provider/get-provider.js';
 	import SearchBlock from './blocks/GlobalSearch.svelte';
 	import ParentBlock from './blocks/Parent.svelte';
 	import ProvidersBlock from './blocks/Providers.svelte';

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { phrases } from '../../../../config/phrases';
-	import type { IconsListMode } from '../../../types';
+	import { phrases } from '$lib/config/phrases.js';
+	import type { IconsListMode } from '../../../types.js';
 	import IconButton from '../../../ui/IconButton.svelte';
 
 	// Text

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
-	import { phrases } from '../../../../../config/phrases';
-	import Input from '../../../../ui/Input.svelte';
+	import { phrases } from '$lib/config/phrases.js';
+	import Input from '$lib/components/ui/Input.svelte';
 
 	// Input property: width or height
 	type Props = 'width' | 'height';

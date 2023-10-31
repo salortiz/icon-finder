@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { maxIndex } from '../../config/theme';
+	import { maxIndex } from '$lib/config/theme.js';
 	import type { Tab } from '../types';
 	import UIIcon from './UIIcon.svelte';
 

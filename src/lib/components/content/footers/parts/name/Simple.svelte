@@ -2,8 +2,8 @@
 	import type { FullRoute, Icon } from '@iconify/search-core';
 	import IconComponent from '@iconify/svelte';
 	import { iconToString } from '@iconify/search-core';
-	import { shortenIconName } from '../../../../../footer/shorten-icon-name';
-	import { phrases } from '../../../../../config/phrases';
+	import { shortenIconName } from '$lib/footer/shorten-icon-name.js';
+	import { phrases } from '$lib/config/phrases.js';
 
 	// Icon name
 	export let icon: Icon;

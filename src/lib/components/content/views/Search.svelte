@@ -4,7 +4,7 @@
 		SearchViewBlocks,
 	} from '@iconify/search-core';
 	import { getProvider } from '@iconify/search-core';
-	import type { SelectedIcons } from '../../../wrapper/icons';
+	import type { SelectedIcons } from '$lib/wrapper/icons.js';
 	import FiltersBlock from '../blocks/Filters.svelte';
 	import IconsWithPages from '../blocks/IconsWithPages.svelte';
 

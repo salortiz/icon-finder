@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { FiltersFilter } from '@iconify/search-core';
-	import { maxIndex } from '../../config/theme';
+	import { maxIndex } from '$lib/config/theme.js';
 
 	// True if filter is active
 	export let active: boolean = false;
