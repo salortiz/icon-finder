@@ -3,7 +3,7 @@
 @import 'mixins';
 @function dcolor($dark, $base) {
 	@if $dark {
-		@return 1000 - $base;
+		@return 950 - $base;
 	}
 	@return $base;
 }

@@ -21,13 +21,13 @@ $iif-large-font-size: 22px;
 $iif-large-line-height: 32px;
 
 // Main palette
-$iif-background-color: palette('gray', dcolor($iif-dark, 0));
-$iif-background-color2: palette('gray', dcolor($iif-dark, 25));
-$iif-background-color3: palette('gray', dcolor($iif-dark, 0));
+$iif-background-color: palette('blue-gray', dcolor($iif-dark, 50));
+$iif-background-color2: palette('blue-gray', dcolor($iif-dark, 100));
+$iif-background-color3: palette('blue-gray', dcolor($iif-dark, 0));
 
-$iif-text-color: palette('gray', dcolor($iif-dark, 850));
+$iif-text-color: palette('gray', dcolor($iif-dark, 900));
 $iif-text-muted-color: palette('gray', dcolor($iif-dark, 400));
-$iif-text-dimmed-color: palette('gray', dcolor($iif-dark, 600));
+$iif-text-dimmed-color: palette('gray', dcolor($iif-dark, 700));
 $iif-text-faint-color: palette('gray', dcolor($iif-dark, 200));
 
 $iif-simple-border-color: palette('gray', dcolor($iif-dark, 100));
@@ -249,7 +249,7 @@ $iif-collection-border-width: $iif-border-width;
 
 $iif-collections-list-stats-width: 80px + $iif-collection-border-width;
 $iif-collections-list-min-width: 200px;
-$iif-collections-list-max-width: $iif-collections-list-min-width + 120px;
+$iif-collections-list-max-width: $iif-collections-list-min-width + 80px;
 $iif-collections-list-spacing: 12px;
 
 // Collection
