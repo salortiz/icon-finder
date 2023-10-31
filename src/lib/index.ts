@@ -1,3 +1,4 @@
 import Finder from "./Finder.svelte";
-import { Wrapper } from "./wrapper";
+export type { FinderCallback, FinderCtrl, FinderOptions } from "./Finder.svelte";
+import { Wrapper } from "./wrapper.js";
 export{ Finder, Wrapper };

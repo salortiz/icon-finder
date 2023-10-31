@@ -1,8 +1,8 @@
 import type { IconifyJSON } from '@iconify/types';
 import type { IconFinderCustomSets } from '@iconify/search-core';
-import type { IconFinderEvent } from './events';
-import type { InitialIconFinderState } from './state';
-import type { FinderOptions } from '$lib/config/components';
+import type { IconFinderEvent } from './events.js';
+import type { InitialIconFinderState } from './state.js';
+import type { FinderOptions } from '$lib/config/components.js';
 
 /**
  * Wrapper parameters

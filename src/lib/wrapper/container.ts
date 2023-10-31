@@ -1,7 +1,7 @@
 import type { FullRoute, RouterEvent } from '@iconify/search-core';
 import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
-import type { SelectedIcons } from './icons';
-import type { WrappedRegistry } from './registry';
+import type { SelectedIcons } from './icons.js';
+import type { WrappedRegistry } from './registry.js';
 
 /**
  * Container parameters

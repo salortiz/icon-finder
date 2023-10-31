@@ -1,6 +1,6 @@
 <script lang="ts" context="module">
-	import type { IconFinderWrapperParams } from "./wrapper/params";
-	import type { FinderOptions } from "./config/components";
+	import type { IconFinderWrapperParams } from "./wrapper/params.js";
+	import type { FinderOptions } from "./config/components.js";
 	type FinderCallback = IconFinderWrapperParams['callback'];
 	export type { FinderCallback, FinderOptions};
 	import { onMount } from 'svelte';

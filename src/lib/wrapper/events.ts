@@ -4,8 +4,8 @@ import type {
 	IconFinderConfig,
 } from '@iconify/search-core';
 import type { PartialIconCustomisations } from '@iconify/search-core/lib/misc/customisations';
-import type { IconFinderState } from './state';
-import type { Wrapper } from '$lib/wrapper';
+import type { IconFinderState } from './state.js';
+import type { Wrapper } from '$lib/wrapper.js';
 
 /**
  * Life cycle events

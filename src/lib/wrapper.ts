@@ -33,29 +33,29 @@ import {
 	filterCustomisations,
 	mergeCustomisations,
 } from '@iconify/search-core/lib/misc/customisations';
-import { finderDefaultConfig } from './config/components';
-import type { IconFinderWrapperParams } from './wrapper/params';
-import type { IconFinderState } from './wrapper/state';
-import type { WrapperStatus } from './wrapper/status';
-import type { IconFinderEvent } from './wrapper/events';
+import { finderDefaultConfig } from './config/components.js';
+import type { IconFinderWrapperParams } from './wrapper/params.js';
+import type { IconFinderState } from './wrapper/state.js';
+import type { WrapperStatus } from './wrapper/status.js';
+import type { IconFinderEvent } from './wrapper/events.js';
 import type {
 	UIEvent,
 	UICustomisationEvent,
 	UIFooterButtonEvent,
 	UISelectionEvent,
-} from './events/types';
-import type { WrappedRegistry } from './wrapper/registry';
-import type { ContainerProps } from './wrapper/container';
-import { defaultComponentsConfig } from './config/wrapper';
-import type { SelectedIcons, SelectIcon } from './wrapper/icons';
+} from './events/types.js';
+import type { WrappedRegistry } from './wrapper/registry.js';
+import type { ContainerProps } from './wrapper/container.js';
+import { defaultComponentsConfig } from './config/wrapper.js';
+import type { SelectedIcons, SelectIcon } from './wrapper/icons.js';
 import {
 	addToSelection,
 	removeFromSelection,
 	isIconSelected,
 	selectionToArray,
-} from './wrapper/icons';
-import { addCustomAPIProviders } from './config/api';
-import { importThemeIcons } from './config/theme';
+} from './wrapper/icons.js';
+import { addCustomAPIProviders } from './config/api.js';
+import { importThemeIcons } from './config/theme.js';
 
 // Change import to change container component
 import Container from './components/Container.svelte';
