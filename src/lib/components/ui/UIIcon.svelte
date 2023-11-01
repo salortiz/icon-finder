@@ -1,5 +1,6 @@
 <script context="module" lang="ts">
-	let firstMount: boolean = true;
+	let firstMount = true;
+	let allLoaded = false;
 </script>
 
 <script lang="ts">
@@ -28,9 +29,12 @@
 		if (firstMount) {
 			firstMount = false;
 			loadIcons(
-				Object.values(icons).filter((name) => !!name) as string[]
+				Object.values(icons).filter((name) => !!name) as string[],
+				(l) => { if(l.length) allLoaded = true }
 			);
 		}
+		else if(allLoaded) // Syntetize bc its awaited
+			loadCallback();
 	});
 
 	// Resolve icon name
@@ -49,7 +53,8 @@
 	<Icon
 		icon={iconName}
 		class={iconsClass}
-		on:load={loadCallback} />{#if !loaded}
+		on:load={loadCallback} />
+	{#if !loaded}
 		<slot />
 	{/if}
 {:else}

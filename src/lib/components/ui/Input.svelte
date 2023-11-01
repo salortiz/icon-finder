@@ -32,9 +32,6 @@
 
 	// Icon status
 	let hasIcon: boolean = false;
-	function iconLoaded() {
-		hasIcon = true;
-	}
 
 	// Base class name
 	const baseClass = 'iif-input';
@@ -70,6 +67,10 @@
 			(type !== '' ? ' ' + baseClass + '--' + type : '') +
 			// Disabled
 			(disabled ? ' ' + baseClass + '--disabled' : '');
+	}
+
+	function iconLoaded() {
+		hasIcon = true;
 	}
 
 	// Get icon style
