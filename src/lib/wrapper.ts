@@ -23,6 +23,7 @@ import type {
 	IconFinderCoreParams,
 	RouterEvent,
 	CoreIconifyFunctions,
+	FullRoute,
 } from '@iconify/search-core';
 import type {
 	IconCustomisations,
@@ -322,7 +323,7 @@ export class Wrapper {
 		// Constructor parameters
 		const params = {
 			target: this._params.container,
-			props,
+			props: props as ContainerProps & {route: FullRoute},
 		};
 
 		return new Container(params);
@@ -556,7 +557,7 @@ export class Wrapper {
 
 		if (
 			(!selected && select === 'force') ||
-			!this._registry.config.components.multiSelect
+			!this._registry.config.components.multi
 		) {
 			// Clear selection if multiple icons cannot be selected and icon is not selected
 			this._selection = Object.create(null);
