@@ -1,10 +1,10 @@
 {
     "name": "svelte-iconfinder",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "private": true,
     "type": "module",
     "description": "Uniform iconfinder",
-    "author": "Vjacheslav Trushkin (Iconify OÜ)",
+    "author": "Salvador Ortiz García",
     "license": "(Apache-2.0 OR GPL-2.0)",
     "scripts": {
         "dev": "vite",
