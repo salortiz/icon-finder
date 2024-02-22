@@ -1,5 +1,6 @@
 import type { FooterButton, FooterButtonCallbackParams } from '../footer/types';
 import type { Footers } from '$lib/components/content/Footer.svelte';
+import type { IconNames } from '$lib/components/content/footers/parts/name/IconName';
 
 export type FinderConfig = {
 	showProviders: boolean,
@@ -21,6 +22,7 @@ export type FinderConfig = {
 	footerButtons: Record<string, FooterButton>,
 	showCode: false,
 	footer: Footers
+	footerNamer: IconNames,
 }
 export type FinderOptions = Partial<FinderConfig>;
 
@@ -111,6 +113,9 @@ const customiseInline = false;
 // Footer to use
 const footer = 'Full';
 
+// FooterNamer to use
+const footerNamer = 'Simple';
+
 /**
  * Default values for color, width and height
  */
@@ -167,5 +172,6 @@ export const finderDefaultConfig: FinderConfig = {
 	showButtons,
 	footerButtons,
 	showCode,
-	footer
+	footer,
+	footerNamer
 }

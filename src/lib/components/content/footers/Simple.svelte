@@ -16,10 +16,8 @@
 	import FooterBlock from './parts/FooterBlock.svelte';
 	import InfoBlock from '../blocks/CollectionInfo.svelte';
 
-	/* Various components for icon name. Uncomment one you want to use */
-	import IconName from './parts/name/Simple.svelte';
-	// import IconName from './parts/name/SimpleEditable.svelte';
-	// import IconName from './parts/name/Block.svelte';
+	/* Various components for icon name. */
+	import { IconNameMap } from './parts/name/IconName';
 
 	/* Switch to Empty.svelte if you do not want to show code samples block. Also see ../../config/components.ts */
 	import CodeBlock from './parts/code/Container.svelte';
@@ -50,8 +48,10 @@
 		showCustomisatons,
 		showCode,
 		footerButtons,
-		canShortenIconName
+		canShortenIconName,
+		footerNamer,
 	} = finderConfig;
+	const IconName = IconNameMap[footerNamer];
 
 	// Check if icons are selected, get first icon
 	let icon: Icon | null;
