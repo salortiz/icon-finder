@@ -1,11 +1,10 @@
 <script lang="ts">
+	import IconComponent, { getIcon } from '@iconify/svelte';
 	import type { IconifyIcon } from '@iconify/svelte';
-	import IconComponent from '@iconify/svelte';
 	import type { Icon } from '@iconify/search-core';
 	import { iconToString } from '@iconify/search-core';
-	import { Iconify } from '@iconify/search-core/lib/iconify';
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
-	import { getDimensions } from '../../../../../footer/icon-size';
+	import { getDimensions } from '$lib/footer/icon-size';
 	import {
 		iconSampleSize,
 		defaultColor,
@@ -87,7 +86,7 @@
 		const name = iconToString(icon);
 
 		// Get data (both getIcon and icon data are available: check is done in footer)
-		const iconData = Iconify.getIcon!(name)!;
+		const iconData = getIcon(name)!;
 
 		// Check if icon is rotated (for width/height calculations)
 		const rotated = !!(

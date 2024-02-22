@@ -1,8 +1,6 @@
 <script lang="ts">
-	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
-	import type { Icon } from '@iconify/search-core';
+	import { getIcon } from '@iconify/svelte';
 	import { iconToString } from '@iconify/search-core';
-	import { Iconify } from '@iconify/search-core/lib/iconify';
 	import {
 		stringToColor,
 		colorToString,
@@ -11,6 +9,8 @@
 	import { defaultColor } from '$lib/config/components.js';
 	import Input from '$lib/components/ui/Input.svelte';
 	import OptionsBlock from '../OptionsBlock.svelte';
+	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
+	import type { Icon } from '@iconify/search-core';
 
 	// Selected icons
 	export let icons: Icon[];
@@ -29,7 +29,7 @@
 	$: {
 		hasColor = false;
 		for (let i = 0; i < icons.length; i++) {
-			const data = Iconify.getIcon?.(iconToString(icons[i]));
+			const data = getIcon(iconToString(icons[i]));
 			if (data && data.body.indexOf('currentColor') !== -1) {
 				hasColor = true;
 				break;

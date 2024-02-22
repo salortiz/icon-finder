@@ -20,10 +20,9 @@
 </script>
 <script lang="ts">
 	import { onMount, getContext, onDestroy } from 'svelte';
-	import { loadIcons, type IconifyIconSize } from '@iconify/svelte';
+	import { loadIcons, getIcon, type IconifyIconSize } from '@iconify/svelte';
 	import type { Icon } from '@iconify/search-core';
 	import { iconToString } from '@iconify/search-core';
-	import { Iconify } from '@iconify/search-core/lib/iconify';
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
 	import type { SelectedIcons } from '$lib/wrapper/icons.js';
 	import { selectionToArray } from '$lib/wrapper/icons.js';
@@ -42,7 +41,7 @@
 	const registry = getContext('registry') as WrappedRegistry;
 	const { footer } = registry.config.finder;
 	//console.log('Footer', footer);
-	const Footer = FooterMap[footer] as typeof FooterSimple; // Avoid signature warning for None.
+	const ActualFooter = FooterMap[footer] as typeof FooterSimple; // Avoid signature warning for None.
 
 	// Change icon customisation value
 	function customise(prop: keyof IconCustomisations, value: unknown) {
@@ -98,7 +97,7 @@
 		const list = selectionLength ? selectionToArray(selection) : [];
 		list.forEach((icon) => {
 			const name = iconToString(icon);
-			if (Iconify.getIcon?.(name)) {
+			if (getIcon(name)) {
 				icons.push(icon);
 				return;
 			}
@@ -134,4 +133,4 @@
 	});
 </script>
 
-<Footer {icons} {customisations} {route} {customise} />
+<ActualFooter {icons} {customisations} {route} {customise} />

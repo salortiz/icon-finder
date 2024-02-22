@@ -1,8 +1,7 @@
 <script lang="ts">
-	import IconComponent from '@iconify/svelte';
+	import IconComponent, { getIcon } from '@iconify/svelte';
 	import type { FullRoute, Icon } from '@iconify/search-core';
 	import { iconToString } from '@iconify/search-core';
-	import { Iconify } from '@iconify/search-core/lib/iconify';
 	import { getIconGrid } from '$lib/footer/scale-icon.js';
 	import { shortenIconName } from '$lib/footer/shorten-icon-name.js';
 
@@ -30,7 +29,7 @@
 	// Get grid
 	let grid: number;
 	$: {
-		const iconData = Iconify.getIcon?.(iconName);
+		const iconData = getIcon(iconName);
 		if (!iconData || !iconData.height) {
 			grid = 0;
 		} else {

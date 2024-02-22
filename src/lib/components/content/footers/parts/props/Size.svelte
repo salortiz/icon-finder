@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { calculateSize } from '@iconify/svelte';
+	import { calculateSize, getIcon } from '@iconify/svelte';
 	import type { Icon } from '@iconify/search-core';
 	import { iconToString } from '@iconify/search-core';
-	import { Iconify } from '@iconify/search-core/lib/iconify';
 	import type { IconCustomisations } from '@iconify/search-core/lib/misc/customisations';
 	import {
 		defaultWidth,
@@ -62,7 +61,7 @@
 				return;
 			}
 			const name = iconToString(icon);
-			const data = Iconify.getIcon?.(name);
+			const data = getIcon(name);
 			if (!data) {
 				return;
 			}
