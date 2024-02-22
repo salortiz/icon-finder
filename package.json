@@ -1,6 +1,6 @@
 {
     "name": "svelte-iconfinder",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "private": true,
     "type": "module",
     "description": "Uniform iconfinder",
@@ -24,35 +24,36 @@
     "devDependencies": {
         "@iconify/types": "^2.0.0",
         "@iconify/utils": "^2.1.11",
-        "@sveltejs/adapter-auto": "^2.1.0",
-        "@sveltejs/kit": "^1.25.1",
+        "@sveltejs/adapter-auto": "^3.0.0",
+        "@sveltejs/kit": "^2.0.0",
         "@sveltejs/package": "^2.2.2",
-        "sass": "^1.69.4",
-        "node-sass": "^9.0.0",
-        "nodemon": "^2.0.22",
-        "svelte-loader": "^2.13.6",
-        "svelte-preprocess": "^5.0.4",
-        "@sveltejs/vite-plugin-svelte": "^2.4.2",
+        "@sveltejs/vite-plugin-svelte": "^3.0.0",
         "@tsconfig/svelte": "^5.0.0",
+        "node-sass": "^9.0.0",
+        "sass": "^1.69.4",
         "svelte": "^4.0.5",
         "svelte-check": "^3.4.6",
+        "svelte-loader": "^2.13.6",
+        "svelte-preprocess": "^5.0.4",
         "tslib": "^2.6.0",
         "typescript": "^5.0.2",
-        "vite": "^4.4.5"
+        "vite": "^5.0.0"
     },
     "dependencies": {
         "@iconify/search-core": "../iconify-search-core-1.3.0.tgz",
         "@iconify/svelte": "^3.1.4"
     },
-    "files": [ "dist" ],
+    "files": [
+        "dist"
+    ],
     "svelte": "./dist/index.js",
-    "types" : "./dist/index.d.ts",
+    "types": "./dist/index.d.ts",
     "exports": {
-      ".": {
-        "svelte": "./dist/index.js",
-        "default": "./dist/index.js",
-        "types": "./dist/index.d.ts"
-      },
-      "./package.json": "./package.json"
+        ".": {
+            "svelte": "./dist/index.js",
+            "default": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./package.json": "./package.json"
     }
 }
