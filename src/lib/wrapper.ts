@@ -688,4 +688,5 @@ export class Wrapper {
 			mergeCustomisations(defaultCustomisations, customisations)
 		);
 	}
+	static defaultConfig = finderDefaultConfig;
 }
