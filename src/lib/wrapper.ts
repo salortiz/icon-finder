@@ -609,7 +609,7 @@ export class Wrapper {
 
 		// Add all icons (only last icon if multiple icons cannot be selected)
 		if (icons) {
-			(this._registry.config.components.multiSelect
+			(this._registry.config.components.multi
 				? icons
 				: icons.slice(-1)
 			).forEach((icon) => {
