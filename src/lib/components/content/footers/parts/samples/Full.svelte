@@ -10,7 +10,7 @@
 		defaultColor,
 		defaultWidth,
 		defaultHeight,
-	} from '../../../../../config/components';
+	} from '$lib/config/components';
 
 	// Icon name
 	export let icon: Icon;
