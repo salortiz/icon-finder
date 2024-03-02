@@ -19,4 +19,5 @@ export interface WrappedRegistry extends Registry {
 	callback: (event: UIEvent) => void;
 	link: (event: MouseEvent) => void;
 	config: WrappedFullIconFinderConfig;
+	extras: Record<string, unknown>;
 }

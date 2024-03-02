@@ -145,6 +145,8 @@ export class Wrapper {
 		registry.setCustom('callback', this._internalCallback.bind(this));
 		// External link callback
 		registry.setCustom('link', this._externalLinkCallback.bind(this));
+		// Local extensions
+		registry.setCustom('extras', {}, true); // Be explicit.
 
 		// Add API providers
 		addCustomAPIProviders(registry);
@@ -434,7 +436,7 @@ export class Wrapper {
 				this._triggerEvent({
 					type: 'button',
 					button: (event as UIFooterButtonEvent).button,
-					state: this._state,
+					state: { ...this._state, ...this._registry.extras }
 				});
 				return;
 
