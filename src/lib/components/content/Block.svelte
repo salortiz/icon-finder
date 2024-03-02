@@ -13,6 +13,8 @@
 	$: {
 		className = baseClass;
 		if (type !== '') {
+			if(type == 'footer')
+				className = 'iif-content ' + className;
 			let typeBase = ' ' + baseClass + '--' + type;
 			className += typeBase;
 			if (name !== '') {
