@@ -7,13 +7,15 @@
 	import FooterSimple from './footers/Simple.svelte';
 	import FooterEmpty from './footers/Empty.svelte';
 	import FooterNone from './footers/None.svelte'
+	import FooterReview from './footers/Review.svelte'
 	const FooterMap = {
 		'Full': FooterFull,
 		'Compact': FooterCompact,  // Similar to full, but selected icon (or icons list) is above footer, making it look nicer with small width
 								// Also when multiple icons are selected, it allows selecting icon from selected icons and shows code/customisations for it
+		'Simple': FooterSimple,	// Simple footer: no big sample
+		'Review': FooterReview,
 		'Empty': FooterEmpty,	// Empty footer: only buttons
 		'None': FooterNone,		// No footer
-		'Simple': FooterSimple	// Simple footer: no big sample
 	};
 	export type Footers = keyof typeof FooterMap;
 
